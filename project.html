@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" type=""
+        href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <link rel="stylesheet"
+        href="https://www.engineeringcivil.com/wp-content/themes/Engineering%20Civil%20Theme/css/bootstrap.min.css">
+    <link rel="stylesheet"
+        href="https://www.engineeringcivil.com/wp-content/themes/Engineering%20Civil%20Theme/css/all.css">
+    <link rel="stylesheet"
+        href="https://www.engineeringcivil.com/wp-content/themes/Engineering%20Civil%20Theme/style.css?v=1.71"
+        type="text/css" />
+    <link rel="stylesheet"
+        href="https://www.engineeringcivil.com/wp-content/themes/Engineering%20Civil%20Theme/css/navbar.css?v=1.2"
+        type="text/css" />
+
+    <style type="text/css">
+        div.wpcf7-response-output {
+            float: left;
+            margin: 10px 0 0;
+            padding: 0;
+            background: #eee;
+            padding: 8px 15px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            color: #444;
+        }
+
+        span.wpcf7-not-valid-tip {
+            position: absolute;
+            top: 0;
+            left: 10%;
+            z-index: 100;
+            background: rgba(255, 255, 255, 0.8);
+            border: 1px solid #ccc;
+            font-size: 12px;
+            padding: 2px 10px;
+            color: #222;
+            width: 85%;
+        }
+
+        .wpcf7-form-control-wrap:hover .wpcf7-not-valid-tip,
+        .wpcf7-form-control:focus+.wpcf7-not-valid-tip {
+            display: none;
+        }
+
+        .comment-list {
+            height: 400px;
+            overflow: auto;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            padding: 10px 0;
+        }
+    </style>
+
+    <style type="text/css">
+        .heateor_sss_button_instagram span.heateor_sss_svg,
+        a.heateor_sss_instagram span.heateor_sss_svg {
+            background: radial-gradient(circle at 30% 107%, #fdf497 0, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%)
+        }
+
+        .heateor_sss_horizontal_sharing .heateor_sss_svg,
+        .heateor_sss_standard_follow_icons_container .heateor_sss_svg {
+            color: #fff;
+            border-width: 0px;
+            border-style: solid;
+            border-color: transparent;
+        }
+
+        .heateor_sss_horizontal_sharing .heateorSssTCBackground {
+            color: #666;
+        }
+
+        .heateor_sss_horizontal_sharing span.heateor_sss_svg:hover,
+        .heateor_sss_standard_follow_icons_container span.heateor_sss_svg:hover {
+            border-color: transparent;
+        }
+
+        .heateor_sss_vertical_sharing span.heateor_sss_svg,
+        .heateor_sss_floating_follow_icons_container span.heateor_sss_svg {
+            color: #fff;
+            border-width: 0px;
+            border-style: solid;
+            border-color: transparent;
+        }
+
+        .heateor_sss_vertical_sharing .heateorSssTCBackground {
+            color: #666;
+        }
+
+        .heateor_sss_vertical_sharing span.heateor_sss_svg:hover,
+        .heateor_sss_floating_follow_icons_container span.heateor_sss_svg:hover {
+            border-color: transparent;
+        }
+
+        @media screen and (max-width:783px) {
+            .heateor_sss_vertical_sharing {
+                display: none !important
+            }
+        }
+    </style>
+    <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+    <!-- Speed of this site is optimised by WP Performance Score Booster plugin v2.2.1 - https://dipakgajjar.com/wp-performance-score-booster/ -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical" href="https://www.engineeringcivil.com/" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Civil Engineering Home - Civil Engineering Portal" />
+    <meta property="og:description"
+        content="Engineering is a term applied to the profession in which a knowledge of the mathematical and natural sciences, gained by study, experience, and practice, is applied to the efficient use of the materials and forces of nature. Engineers are the ones who have received professional training in pure and applied science.Before the middle of the..." />
+    <meta property="og:url" content="https://www.engineeringcivil.com/" />
+    <meta property="og:site_name"
+        content="Civil Engineering Portal - Biggest Civil Engineering Information Sharing Website" />
+    <meta property="article:modified_time" content="2021-06-06T04:55:09+00:00" />
+    <meta property="og:image" content="https://www.engineeringcivil.com/wp-content/uploads/2021/07/cep-logo.jpg" />
+    <meta property="og:image:width" content="600" />
+    <meta property="og:image:height" content="400" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <script type="application/ld+json"
+        class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://www.engineeringcivil.com/","url":"https://www.engineeringcivil.com/","name":"Civil Engineering Home - Civil Engineering Portal","isPartOf":{"@id":"https://www.engineeringcivil.com/#website"},"about":{"@id":"https://www.engineeringcivil.com/#organization"},"datePublished":"2008-02-22T16:16:58+00:00","dateModified":"2021-06-06T04:55:09+00:00","breadcrumb":{"@id":"https://www.engineeringcivil.com/#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://www.engineeringcivil.com/"]}]},{"@type":"BreadcrumbList","@id":"https://www.engineeringcivil.com/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home"}]},{"@type":"WebSite","@id":"https://www.engineeringcivil.com/#website","url":"https://www.engineeringcivil.com/","name":"Civil Engineering Portal - Biggest Civil Engineering Information Sharing Website","description":"","publisher":{"@id":"https://www.engineeringcivil.com/#organization"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://www.engineeringcivil.com/?s={search_term_string}"},"query-input":"required name=search_term_string"}],"inLanguage":"en-US"},{"@type":"Organization","@id":"https://www.engineeringcivil.com/#organization","name":"Civl Engineering Portal","url":"https://www.engineeringcivil.com/","logo":{"@type":"ImageObject","inLanguage":"en-US","@id":"https://www.engineeringcivil.com/#/schema/logo/image/","url":"https://www.engineeringcivil.com/wp-content/uploads/2021/06/CE-logo.png","contentUrl":"https://www.engineeringcivil.com/wp-content/uploads/2021/06/CE-logo.png","width":514,"height":160,"caption":"Civl Engineering Portal"},"image":{"@id":"https://www.engineeringcivil.com/#/schema/logo/image/"}}]}</script>
+    <!-- / Yoast SEO plugin. -->
+
+
+    <style id='classic-theme-styles-inline-css' type='text/css'>
+        /*! This file is auto-generated */
+        .wp-block-button__link {
+            color: #fff;
+            background-color: #32373c;
+            border-radius: 9999px;
+            box-shadow: none;
+            text-decoration: none;
+            padding: calc(.667em + 2px) calc(1.333em + 2px);
+            font-size: 1.125em
+        }
+
+        .wp-block-file__button {
+            background: #32373c;
+            color: #fff;
+            text-decoration: none
+        }
+    </style>
+    <link rel='stylesheet' id='contact-form-7-css'
+        href='https://www.engineeringcivil.com/wp-content/plugins/contact-form-7/includes/css/styles.css'
+        type='text/css' media='all' />
+    <link rel='stylesheet' id='wp-email-css'
+        href='https://www.engineeringcivil.com/wp-content/plugins/wp-email/email-css.css' type='text/css' media='all' />
+    <script type='text/javascript' src='https://www.engineeringcivil.com/wp-includes/js/jquery/jquery.min.js'
+        id='jquery-core-js'></script>
+    <script type='text/javascript' src='https://www.engineeringcivil.com/wp-includes/js/jquery/jquery-migrate.min.js'
+        id='jquery-migrate-js'></script>
+    <style type="text/css">
+        .wp_autosearch_suggestions {
+            border-width: 1px;
+            border-color: #57C297 !important;
+            border-style: solid;
+            width: 190px;
+            background-color: #a0a0a0;
+            font-size: 10px;
+            line-height: 14px;
+            border: none !important;
+        }
+
+        .wp_autosearch_suggestions a {
+            display: block;
+            clear: left;
+            text-decoration: none;
+        }
+
+        .wp_autosearch_suggestions a img {
+            float: left;
+            padding: 3px 5px;
+        }
+
+        .wp_autosearch_suggestions a .searchheading {
+            display: block;
+            font-weight: bold;
+            padding-top: 5px;
+        }
+
+        .wp_autosearch_suggestions .wps_odd a {
+            color: #000000;
+        }
+
+        .wp_autosearch_suggestions .wps_even a {
+            color: #000000;
+        }
+
+        .wp_autosearch_suggestions .wp_autosearch_category {
+            font-size: 12px;
+            padding: 5px;
+            display: block;
+            background-color: #5286A0 !important;
+            color: #FFFFFF !important;
+        }
+
+        .wps_over a.wp_autosearch_category {
+            color: #FFFFFF !important;
+            background-color: 6A81A0 !important;
+        }
+
+        .wp_autosearch_suggestions .wp_autosearch_more {
+            padding: 5px;
+            display: block;
+            background-color: #5286A0 !important;
+            color: #FFFFFF !important;
+            background-image: url(https://www.engineeringcivil.com/wp-content/plugins/wp-autosearch//assert/image/arrow.png);
+            background-repeat: no-repeat;
+            background-position: 99% 50%;
+            cursor: pointer;
+        }
+
+        .wps_over a.wp_autosearch_more {
+            color: #FFFFFF !important;
+            background-color: #4682A0 !important;
+        }
+
+        .wp_autosearch_suggestions .wp_autosearch_more a {
+            height: auto;
+            color: #FFFFFF !important;
+        }
+
+        .wp_autosearch_image {
+            margin: 2px;
+        }
+
+        .wp_autosearch_result {
+            padding-left: 5px;
+        }
+
+        .wp_autosearch_indicator {
+            background: url('https://www.engineeringcivil.com/wp-content/plugins/wp-autosearch//assert/image/indicator.gif') no-repeat scroll 100% 50% #FFF !important;
+        }
+
+        .wp_autosearch_suggestions {
+            padding: 0px;
+            background-color: white;
+            overflow: hidden;
+            z-index: 99999;
+        }
+
+        .wp_autosearch_suggestions ul {
+            width: 100%;
+            list-style-position: outside;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .wp_autosearch_suggestions li {
+            margin: 0px;
+            cursor: pointer;
+            display: block;
+            font: menu;
+            font-size: 12px;
+            line-height: 16px;
+            overflow: hidden;
+        }
+
+        .wps_odd {
+            background-color: #FFFFFF;
+        }
+
+        .wps_even {
+            background-color: #E8E8E8;
+        }
+
+        .ac_over {
+            background-color: #2467EC;
+            color: #FFFFFF !important;
+        }
+
+        .ac_over a,
+        .ac_over a span {
+            color: #FFFFFF !important;
+        }
+
+        .wp_autosearch_input {
+            width: 88% !important;
+            height: 50px !important;
+            border: none !important;
+            background-color: #FFFFFF !important;
+            outline: none;
+            box-shadow: 0px 0px 0px #FFF !important;
+            -moz-box-shadow: 0px 0px 0px #FFF !important;
+            -webkit-box-shadow: 0px 0px 0px #FFF !important;
+            text-indent: 5px !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            overflow: hidden;
+            float: left;
+            line-height: 29px;
+            vertical-align: middle;
+            color: #000000 !important;
+        }
+
+        .wp_autosearch_wrapper {
+            width: 100%;
+        }
+
+        .wp_autosearch_suggestions {
+            box-shadow: #888888 5px 10px 10px;
+            -webkit-box-shadow: #888888 5px 10px 10px;
+        }
+
+        .wp_autosearch_submit,
+        .wp_autosearch_submit:hover,
+        .wp_autosearch_submit:active,
+        .wp_autosearch_submit:visited {
+            cursor: pointer;
+            height: 50px;
+            width: 54px;
+            overflow: hidden;
+            background: transparent url('') no-repeat scroll !important;
+            float: right;
+            font-size: 100%;
+            -webkit-appearance: none;
+            outline: none;
+            position: absolute;
+            right: 0px;
+            top: 0px;
+            background-color: transparent;
+            border: none;
+            border-radius: 0 !important;
+            padding: 0 !important;
+            margin: 0 !important;
+            display: block !important;
+        }
+
+        .wp_autosearch_form_wrapper {
+            width: 100%;
+            border: 1px solid #57C297 !important;
+            height: 52px !important;
+            background-color: #FFFFFF !important;
+            position: relative;
+        }
+
+        .wp_autosearch_item_description {
+            padding-right: 2px;
+            padding-left: 2px;
+        }
+
+        .wp_autosearch_form_label {
+            display: none;
+        }
+    </style>
+    <!-- BEGIN recaptcha, injected by plugin wp-recaptcha-integration  -->
+
+    <title>Document</title>
+</head>
+
+<body>
+    <header class="header_area">
+        <div class="main_menu">
+            <div class="container">
+                <div class="col-md-3" id="logo">
+                    <a href="https://aggassengineering.com" class="custom-logo-link" rel="home" aria-current="page"><img
+                            width="514" height="160" src="static/logo.jpg" class="custom-logo" alt= /></a>
+                    <a href="#" class="site-menu-toggle js-menu-toggle"><i class="fas fa-bars"></i></a>
+                </div>
+                <div class="site-wrap">
+                    <div class="site-mobile-menu">
+                        <div class="site-mobile-menu-header">
+                            <div class="site-mobile-menu-close">
+                                <i class="fas fa-times js-menu-toggle"></i>
+                            </div>
+                        </div>
+                        <div class="site-mobile-menu-body">
+                        </div>
+                    </div>
+                    <header class="site-navbar">
+                        <nav class="site-navigation text-center" role=navigation>
+                            <ul id="menu-top-nav" class="site-menu js-clone-nav">
+                                <li class="menu-item-has-children col2"><a href="#">Browse by Topics</a>
+                                    <ul class="dropdown">
+                                        <li><a href="index.html">Building</a></li>
+                                        <li><a href="index.html">achiements</a></li>
+                                        <li><a href="career.html">Training</a></li>
+                                        <li><a href="service.html">projects</a></li>
+
+                                    </ul>
+                                </li>
+                                <li class="menu-item-has-children col3"><a href="#">Knowledge Center</a>
+                                    <ul class="dropdown">
+                                        <li><a href="">How project is executed</a></li>
+                                        <li><a href="career.html">Interviews</a></li>
+                                        <li><a href="service.html">Project Reports</a></li>
+                                        <li><a href="home.html">machineries</a></li>
+                                    </ul>
+                                </li>
+                                <li class="askaquestion"><a href="contact.html">Email Us</a></li>
+                            </ul>
+                        </nav>
+                    </header>
+                </div>
+
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <div class="col-md-9">
+            <h2>ALL ABOUT AGGASS ENGINEERING COMPANY LIMITED</h2>
+            <div class="pbox">
+                <a class="heading" href="">Projects and services</a>
+                <div class="content">
+                    <p>
+                    <p><strong>Introduction</strong><br />
+                    We are primarily into civil works and mainly construction of contracted roads. Services such as clearing, constructing and renovations are parts of our civil works. Our responsibilities as a company is to design and create good and quality roads, gutters to meet the standard of the world civil criteria. Most of our contracts are in partnership with Newmont Ahafo and most contractors .    
+                    </p>
+                    <p> <a href="https://www.engineeringcivil.com/types-of-loads-on-buildings.html#more-8297"
+                            class="more-link">Read More</a></p>
+                    </p>
+                </div>
+            </div>
+            <div class="pbox">
+				<a class="heading" href="">STONE PITCHING WORKS AT POER PLANT-NGGLAHAFO</a>
+				<div class="content">
+								<p><p><strong>Introduction:</strong><br />
+This is one of our projects at Ahafo Mine site. This awarded contract is one of our recommendable works. It was executed on the expected date and is active in state</p>
+<p><img decoding="async" loading="lazy" src="static/Screenshot from 2024-04-25 20-30-1.png" alt="Fig 1: STONE PITCHING WORKS AT POER PLANT-NGGLAHAFO" width="820" height="324" class="alignnone size-medium wp-image-8203" srcset="" sizes="(max-width: 520px) 100vw, 520px" /><br />
+Fig 1: STONE PITCHING WORKS AT POER PLANT-NGGLAHAFO</p>
+<hr>
+<p><img decoding="async" loading="lazy" src="static/kwakekrom.jpg" alt="Fig 1: STONE PITCHING WORKS AT POER PLANT-NGGLAHAFO" width="820" height="324" class="alignnone size-medium wp-image-8203" srcset="" sizes="(max-width: 520px) 100vw, 520px" /><br />
+    Fig :kwakekrom road division </p>
+    
+<p> <a href="service.html" class="more-link">Read More</a></p>
+</p>
+				</div>
+			   </div>
+				                <div class="pbox">
+				<a class="heading" href="">TEACHERS QUARTERS AT KENYASI</a>
+				<div class="content">
+                    <p><p><strong>Introduction:</strong><br />
+                        This is one of our projects at Ahafo Mine site. This awarded contract is one of our recommendable works. It was executed on the expected date and is active in state</p>
+                        <p><img decoding="async" loading="lazy" src="static/teachers_quarters_kenyasi.png" alt="Fig 1: STONE PITCHING WORKS AT POER PLANT-NGGLAHAFO" width="520" height="324" class="alignnone size-medium wp-image-8203" srcset="" sizes="(max-width: 520px) 100vw, 520px" /><br />
+                        Fig 2: TEACHERS QUARTERS AT KENYASI 1</p>
+                        <hr>
+                        <p><img decoding="async" loading="lazy" src="static/kvip_rc_kenya1.png" alt="Fig 1: STONE PITCHING WORKS AT POER PLANT-NGGLAHAFO" width="520" height="324" class="alignnone size-medium wp-image-8203" srcset="" sizes="(max-width: 520px) 100vw, 520px" /><br />
+                            KENYASI K.V.I.P</p>
+                            
+                        <p> <a href="service.html" class="more-link">Read More</a></p>
+                        </p>
+				</div>
+			   </div>
+               <div class="clear"></div>
+               
+
+<div id="branches">
+	<div class="container">
+       <h2 class="heading">Civil Engineering Works</h2>
+       <div class="branchrow">
+
+			<a id="box" href="https://www.engineeringcivil.com/theory/building">
+				<img src="https://www.engineeringcivil.com/wp-content/uploads/2022/06/CEBuilding.png" alt="Building" width="128" height="128">
+				<p>Building</p>
+            </a>
+			<a id="box" href="https://www.engineeringcivil.com/theory/surveying">
+				<img src="https://www.engineeringcivil.com/wp-content/uploads/2022/06/cesuryeing.png" alt="Surveying" width="128" height="128">
+				<p>Surveying</p>
+            </a>
+			<a id="box" href="">
+				<img src="https://www.engineeringcivil.com/wp-content/uploads/2022/06/cesteeworks.png" alt="Steelworks" width="128" height="128">
+				<p>Steelworks</p>
+            </a>
+
+			<a id="box" href="#">
+				<img src="https://www.engineeringcivil.com/wp-content/uploads/2022/06/cebridge.png" alt="Bridge Engineering" width="128" height="128">
+				<p>Bridge Engineering</p>
+            </a>
+			<a id="box" href="#">
+				<img src="https://www.engineeringcivil.com/wp-content/uploads/2022/06/ceconcrete.png" alt="Concrete Engineering" width="128" height="128">
+				<p>Concrete Engineering Services</p>
+            </a>
+			<!-- <a id="box" href="https://www.engineeringcivil.com/theory/soil-engineering">
+				<img src="https://www.engineeringcivil.com/wp-content/uploads/2022/06/cesoil.png" alt="Soil Engineering" width="128" height="128">
+				<p>Soil Engineering</p>
+            </a> -->
+
+			<a id="box" href="#">
+				<img src="https://www.engineeringcivil.com/wp-content/uploads/2022/06/cehighway.png" alt="Highway Engineering" width="128" height="128">
+				<p>Highway Engineering Service</p>
+            </a>
+			<!-- <a id="box" href="https://www.engineeringcivil.com/theory/prestress-engineering">
+				<img src="https://www.engineeringcivil.com/wp-content/uploads/2022/06/ceprestress.png" alt="Prestress Engineering" width="128" height="128">
+				<p>Prestress Engineering</p>
+            </a> -->
+			<!-- <a id="box" href="https://www.engineeringcivil.com/theory/hydraulics">
+				<img src="https://www.engineeringcivil.com/wp-content/uploads/2022/06/ceHudrauilcs.png" alt="Hydraulics" width="128" height="128">
+				<p>Hydraulics</p>
+            </a>
+
+			<a id="box" href="https://www.engineeringcivil.com/theory/timber-engineering">
+				<img src="https://www.engineeringcivil.com/wp-content/uploads/2022/06/cetimber.png" alt="Timber Engineering" width="128" height="128">
+				<p>Timber Engineering</p>
+            </a> -->
+			<!-- <a id="box" href="https://www.engineeringcivil.com/theory/marine-works">
+				<img src="https://www.engineeringcivil.com/wp-content/uploads/2022/06/cemarine.png" alt="Marine Engineering" width="128" height="128">
+				<p>Marine Engineering</p>
+            </a>
+			<a id="box" href="https://www.engineeringcivil.com/theory/piles-engineering">
+				<img src="https://www.engineeringcivil.com/wp-content/uploads/2022/06/cepiles.png" alt="Piles Engineering" width="128" height="128">
+				<p>Piles Engineering</p>
+            </a> -->
+
+       </div>
+    </div>
+</div>
+<div class="clear"></div>
+
+        </div>
+        <div class="col-md-3">
+            <div class="col-md-20">
+                <h2>Recently Added Topics</h2>
+                <div id="catbox" class="p20">
+                    <ul class="list">
+                        <li><a class="title"
+                                href="index.html">What
+                                is the current project</a></li>
+                        <li><a class="title"
+                                href="#">Jobs  </a></li>
+                        <li><a class="title"
+                                href="">What is our minimum license type</a></li>
+                        <li><a class="title"
+                                href="">What
+                                is the Gradient of the Road and Types of Gradient of Road</a></li>
+                        <li><a class="title"
+                                href="">What is Shoring in Construction?</a></li>
+                        <li><a class="title"
+                                href="">Latest
+                                Innovative Construction Materials</a></li>
+                        <li><a class="title"
+                                href="">Parapet or tyle
+                                Wall &#8211; Applications and Types</a></li>
+                        <li><a class="title"
+                                href="">What is
+                                Tendering in Construction?</a></li>
+                        <li><a class="title"
+                                href="">How to Repair
+                                Concrete Steps?</a></li>
+                        </ul>
+                </div>
+                <div id="catbox" class="p20">
+                    <p class="heading">Machinery & Training</p>
+                    <ul class="list">
+                                            <li><a class="title" href="#">Dozer</a></li>					
+                                            <li><a class="title" href="#"> Excavator</a></li>					
+                                            <li><a class="title" href="#">Backhole</a></li>					
+                                            <li><a class="title" href="#">Grader</a></li>					
+                                            <li><a class="title" href="#">Double axle Tipper Truck </a></li>					
+                                            <li><a class="title" href="#">Roller</a></li>					
+                                                            </ul>
+                    <a class="more-btn" href="service.html">View All</a>
+                </div>
+
+                <div id="catbox" class="p20">
+                    <p class="heading">Training</p>
+                    <ul class="list">
+                                            <li><a class="title" href="#">machineries</a></li>					
+                                            <li><a class="title" href="#"> Safety</a></li>					
+                                            <li><a class="title" href="#">management</a></li>					
+                                            <li><a class="title" href="#">Grader</a></li>					
+                                            <li><a class="title" href="#">Technician </a></li>					
+                                            <li><a class="title" href="#">Advicer</a></li>					
+                                                            </ul>
+                    <a class="more-btn" href="service.html">View All</a>
+                </div>
+            </div>
+
+
+        </div>
+        
+</body>
+
+</html>
