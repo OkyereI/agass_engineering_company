@@ -14,7 +14,66 @@
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
-
+<!-- Font Awesome -->
+<link
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+  rel="stylesheet"
+/>
+<!-- Google Fonts -->
+<link
+  href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+  rel="stylesheet"
+/>
+<!-- Font Awesome -->
+<link
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+  rel="stylesheet"
+/>
+<!-- Google Fonts -->
+<link
+  href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+  rel="stylesheet"
+/>
+<!-- MDB -->
+<link
+  href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.2.0/mdb.min.css"
+  rel="stylesheet"
+/>
+<!-- MDB -->
+<script
+  type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.2.0/mdb.umd.min.js"
+></script>
+<!-- Font Awesome -->
+<link
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+  rel="stylesheet"
+/>
+<!-- Google Fonts -->
+<link
+  href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+  rel="stylesheet"
+/>
+<!-- Font Awesome -->
+<link
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+  rel="stylesheet"
+/>
+<!-- Google Fonts -->
+<link
+  href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+  rel="stylesheet"
+/>
+<!-- MDB -->
+<link
+  href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.2.0/mdb.min.css"
+  rel="stylesheet"
+/>
+<!-- MDB -->
+<script
+  type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.2.0/mdb.umd.min.js"
+></script>
   <title>welcome homepage</title>
   <style>
     body {
@@ -237,6 +296,12 @@ form{
         p,h1,h5,h6{
           text-align: center;
         }
+        #btn-back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+}
   </style>
 </head>
 
@@ -454,6 +519,40 @@ form{
         </div>
       </div>
     </div>
+    <button
+        type="button"
+        class="btn btn-danger btn-floating btn-lg"
+        id="btn-back-to-top"
+        >
+  <i class="fas fa-arrow-up"></i>
+</button>
+<script>
+  //Get the button
+let mybutton = document.getElementById("btn-back-to-top");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function () {
+  scrollFunction();
+};
+
+function scrollFunction() {
+  if (
+    document.body.scrollTop > 20 ||
+    document.documentElement.scrollTop > 20
+  ) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+// When the user clicks on the button, scroll to the top of the document
+mybutton.addEventListener("click", backToTop);
+
+function backToTop() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
     <hr>
     <div class="container">
       <div class="row">
@@ -728,7 +827,7 @@ form{
             </div>
           </div>
           <div class="col-xl-2 offset-xl-1 col-lg-2 col-md-6">
-            <div class="">
+            <div class="col-sm">
               <h4>Quick Link</h4>
               <ul class="list-unstyled">
                 <li>
@@ -748,7 +847,7 @@ form{
             </div>
           </div>
           <div class="col-xl-3 col-lg-3 col-md-6">
-            <div>
+            <div class="col-sm">
               <h4>Service</h4>
               <ul class="list-unstyled">
                 <li>
@@ -767,8 +866,8 @@ form{
             </div>
           </div>
           <div class="col-xl-3 col-lg-3 col-md-6">
-            <div>
-              <h4>Email Us</h4>
+            <div class="col-sm">
+              <h4>Contact Us</h4>
               <div>
                 <label for="Newsletter" class="form-label">Email Us</label>
                 <input type="text" class="form-control" Placeholder="Enter Your Email">
@@ -778,7 +877,7 @@ form{
           </div>
         </div>
         <div class="d-flex justify-content-center">
-          <div class="copyright @Aggass 2024">
+          <div class="copyright @Aggass 2024 col-sm" >
             <a href="https://web.facebook.com/aggassengineering"><i class="fa fa-facebook"></i> facebook</a>
             <a href=""><i class="fa fa-twitter"></i> twitter</a>
             <a href=""><i class="fa fa-instagram"></i> instagram</a>
@@ -786,7 +885,7 @@ form{
           </div>
         </div>
         <div class="d-flex justify-content-center">
-          <div class="copyright">
+          <div class="copyright col-sm">
             <p>Developed and maintained by <a href="https://roartrading.xyz" target="_blank">zion web company|Developer. contact:0547096268</a></p>
             <p class="text-center" style="color: rgb(10, 185, 197);">copyright @ 2024</p>
           </div>
@@ -794,12 +893,12 @@ form{
       </div>
     </footer>
 
-
+<!-- 
     <button onclick="topFunction()" id="myBtn" title="Go to top" style="background-color: red;">Top</button>
 
-    <!-- <div style="background-color:lightgrey;padding:30px 30px 2500px">This example demonstrates how to create a "scroll to top" button that becomes visible 
+    <div style="background-color:lightgrey;padding:30px 30px 2500px">This example demonstrates how to create a "scroll to top" button that becomes visible 
         <strong>when the user starts to scroll the page</strong>.</div>
-       -->
+      
     <script>
       // Get the button
       let mybutton = document.getElementById("myBtn");
@@ -820,7 +919,7 @@ form{
         document.body.scrollTop = 0;
         document.documentElement.scrollTop = 0;
       }
-    </script>
+    </script> -->
 </body>
 
 </html>
