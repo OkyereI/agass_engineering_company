@@ -1,0 +1,1873 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script type="text/javascript" async="" src="Random%20Group%20Generator_files/ec.js"></script><script type="text/javascript" async="" src="Random%20Group%20Generator_files/ecommerce.js"></script><script async="" src="Random%20Group%20Generator_files/analytics.js"></script><script defer="defer" src="Random%20Group%20Generator_files/524_002"></script><script async="" src="Random%20Group%20Generator_files/coreid.min.js"></script><script type="text/javascript" async="" src="Random%20Group%20Generator_files/publishertag.prebid.js"></script><script async="" src="Random%20Group%20Generator_files/launcher.min.js"></script><script async="" defer="defer" src="Random%20Group%20Generator_files/launchpad.bundle.js"></script><script type="text/javascript" async="" src="Random%20Group%20Generator_files/localstore.js"></script>
+<meta http-equiv="Pragma" content="no-cache">
+<meta charset="utf-8">
+<title>Random Group Generator</title>
+<meta name="description" content="Input a class list, and generate random groups / teams!">
+<meta property="og:image" content="https://www.classtools.net/cubeportfolio-elements/img/groups.jpg">
+<meta property="og:title" content="Random Group Generator">
+<meta property="og:description" content="Input a class list, and generate random groups / teams!">
+<script src="Random%20Group%20Generator_files/hadron.js"></script><script src="Random%20Group%20Generator_files/f.txt"></script><script src="Random%20Group%20Generator_files/f_003.txt" async=""></script><script async="" src="Random%20Group%20Generator_files/apstag.js"></script><script async="" type="text/javascript" src="Random%20Group%20Generator_files/f_004.txt"></script><script src="Random%20Group%20Generator_files/jquery.min.js"></script>
+<link rel="stylesheet" href="Random%20Group%20Generator_files/jquery-ui.css">
+<link rel="stylesheet" href="Random%20Group%20Generator_files/style.css">
+<script src="Random%20Group%20Generator_files/jquery-ui.min.js"></script>
+
+	
+<script src="Random%20Group%20Generator_files/flip.js"></script>
+
+<script src="Random%20Group%20Generator_files/min.js"></script>
+	<script type="text/javascript" src="Random%20Group%20Generator_files/save.js"></script>
+	<link rel="stylesheet" href="Random%20Group%20Generator_files/style_002.css">
+		<link rel="stylesheet" type="text/css" href="Random%20Group%20Generator_files/noty.css">
+<script type="text/javascript" src="Random%20Group%20Generator_files/noty.js"></script>
+<link rel="stylesheet" type="text/css" href="Random%20Group%20Generator_files/nest.css"> 
+	
+<script>
+function showConfetti()
+	{
+	setTimeout("$('.js-conFetContainer').fadeOut(50000, function() {$('.js-conFetContainer').remove();})",000);
+$("html").prepend('<div class="js-conFetContainer conFetContainer" style="pointer-events: none;position:fixed;height:100%;width:100%;z-index:999999"></div>');
+window.confettiful = new Confettiful(document.querySelector('.js-conFetContainer'));	
+	}
+
+const Confettiful = function (el) {
+  this.el = el;
+  this.conFetContainerEl = null;
+
+  this.confettiFrequency = 3;
+  this.confettiColors = ['#fce18a', '#ff726d', '#b48def', '#f4306d', '#FFF'];
+  this.confettiAnimations = ['slow', 'medium', 'fast'];
+
+  this._setupElements();
+  this._renderConfetti();
+};
+
+Confettiful.prototype._setupElements = function () {
+  const conFetContainerEl = document.createElement('div');
+  const elPosition = this.el.style.position;
+
+  if (elPosition !== 'relative' || elPosition !== 'absolute') {
+    //this.el.style.position = 'relative';
+  }
+
+  conFetContainerEl.classList.add('confetti-conFetContainer');
+
+  this.el.appendChild(conFetContainerEl);
+
+  this.conFetContainerEl = conFetContainerEl;
+};
+
+Confettiful.prototype._renderConfetti = function () {
+	this.counter=0;
+  this.confettiInterval = setInterval(() => {
+	 this.counter++;if(this.counter<=100){
+    const confettiEl = document.createElement('div');
+    const confettiSize = Math.floor(Math.random() * 5) + 7 + 'px';
+    const confettiBackground = this.confettiColors[Math.floor(Math.random() * this.confettiColors.length)];
+    const confettiLeft = Math.floor(Math.random() * this.el.offsetWidth) + 'px';
+    const confettiAnimation = this.confettiAnimations[Math.floor(Math.random() * this.confettiAnimations.length)];
+
+    confettiEl.classList.add('confetti', 'confetti--animation-' + confettiAnimation);
+    confettiEl.style.left = confettiLeft;
+    confettiEl.style.width = confettiSize;
+    confettiEl.style.height = confettiSize;
+    confettiEl.style.backgroundColor = confettiBackground;
+
+    confettiEl.removeTimeout = setTimeout(function () {
+      confettiEl.parentNode.removeChild(confettiEl);
+    }, 3000);
+
+    this.conFetContainerEl.appendChild(confettiEl);
+	 }
+  }, 25);
+};
+
+</script>
+<style>
+@keyframes confetti-slow {
+  0% {
+    transform: translate3d(0, 0, 0) rotateX(0) rotateY(0);
+  }
+  100% {
+    transform: translate3d(25px, 105vh, 0) rotateX(360deg) rotateY(180deg);
+  }
+}
+@keyframes confetti-medium {
+  0% {
+    transform: translate3d(0, 0, 0) rotateX(0) rotateY(0);
+  }
+  100% {
+    transform: translate3d(100px, 105vh, 0) rotateX(100deg) rotateY(360deg);
+  }
+}
+@keyframes confetti-fast {
+  0% {
+    transform: translate3d(0, 0, 0) rotateX(0) rotateY(0);
+  }
+  100% {
+    transform: translate3d(-50px, 105vh, 0) rotateX(10deg) rotateY(250deg);
+  }
+}
+.conFetContainer {
+	position: fixed;top: 0px;left: 0px;
+  width: 100vw;
+  height: 100vh;
+}
+
+.confetti-conFetContainer {
+  perspective: 700px;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+	z-index:99999;
+}
+
+.confetti {
+  position: absolute;
+  z-index: 99999;
+  top: -10px;
+  border-radius: 0%;
+}
+.confetti--animation-slow {
+  animation: confetti-slow 2.25s linear 1 forwards;
+}
+.confetti--animation-medium {
+  animation: confetti-medium 1.75s linear 1 forwards;
+}
+.confetti--animation-fast {
+  animation: confetti-fast 1.25s linear 1 forwards;
+}
+</style>	
+<script>
+
+createdByPremiumUser=0;theFolder="";
+	
+
+
+groups=4
+	
+oldgroups=5
+hiddenFace="back"
+	
+function init()
+{
+	//if(randAd!=1)
+	//{
+	 window.ezstandalone.cmd.push(function() {
+     // call new placeholders
+     ezstandalone.displayMore(114,122);
+    });
+	//}
+	
+$("#theTitleBox").on("change paste keyup focus", function() {
+if($("#theTitleBox").val()!="My class"){
+	$("#groupN").html(": "+$("#theTitleBox").val())
+ 
+	}
+});
+$("#theTitleBox").focus().blur()
+	
+window.scrollTo({ top: 0, behavior: 'smooth' });
+if ($("#names").val()!="")
+	{
+	$('textarea').trigger('input');
+	doit()
+	}
+else
+	{
+		
+	}
+}
+	
+//PREMIUM SAVE
+function savethefave()
+{
+if(authorType=="new"){apprise("You must edit and save a group first before you can add it to your favourites");return};
+saveFave(self.location+"",$("#theTitleBox").val())//function called from _login.inc.php.
+}
+	
+//SAVE
+function save()
+{
+trimnames()
+theData=$("#names").val()
+theTit=$("#theTitleBox").val()
+if(theData.length==0){apprise("You have nothing to save.");return}
+if(theTit.length==0){apprise("Please provide a title for this group.");return}
+saveOrEdit="save";
+var temp=premiumUserName;
+if(temp==""){temp="NONE"}
+saveit(theTit+"\n*****\nPremiumUserName="+temp+"\n*****\n"+theData+"\n*****\n"+groups)
+}	
+	
+function reposit()
+{
+w=$(this).width()
+h=$(this).height()
+wd=$("#savedBox").width()
+wh=$("#savedBox").height()
+console.log(h+" / "+wh);
+$("#savedBox").css("left",((w*0.5)-(wd*0.5))+"px");
+$("#savedBox").css("top",((h*0.5)-(wh))+"px");	
+$("#savedBox").css("top","50px")
+}
+	
+function removAds()
+{
+$(".asd").hide();	
+}
+	
+function trimnames()
+	{
+	var pane = $('#names');
+    pane.val($.trim(pane.val()).replace(/\s*[\r\n]+\s*/g, '\n')
+                               .replace(/(<[^\/][^>]*>)\s*/g, '$1')
+                               .replace(/\s*(<\/[^>]+>)/g, '$1'));
+	}
+	
+	
+	
+function doit()
+	{
+		
+	trimnames()
+	str=$("#names").val().split("\n")
+		
+	if(str.length<3){apprise("Please provide a list of names.");return}
+	$("#thebutton").hide()
+	randy=Math.ceil(Math.random()*3)
+	for(n=0;n<randy;n++)
+	{console.log(n);setTimeout("doit2()",100+(1500*n));}	
+	setTimeout('$("#thebutton").show();stopSound("swoosh");playSound("tada");showConfetti()',1500*n)
+	}
+
+function doit2()
+{
+	playSound("swoosh")
+	trimnames()
+	
+	str=$("#names").val().split("\n")
+	
+	//Shuffle names
+	for(n=0;n<1000;n++)
+		{
+		rand1=Math.floor(Math.random()*str.length)
+		rand2=Math.floor(Math.random()*str.length)
+		temp=str[rand1]
+		str[rand1]=str[rand2]
+		str[rand2]=temp
+		}
+
+	//Generate areas
+	if(groups!=oldgroups)
+	{
+	hiddenFace="back"
+	$(".grid-container").html("")
+	$(".grid-container").css("grid-template-columns","30% 30% 30%");
+	if(groups==2 || groups==4 || groups==10){$(".grid-container").css("grid-template-columns","47.5% 47.5%");}
+	//if(groups==8){$(".grid-container").css("grid-template-columns","21% 21% 21% 21%");}
+	for(n=0;n<groups;n++)
+		{
+		$(".grid-container").append('<div id="group'+n+'" class="grid-item card"><div class="front"></div><div class="back"></div></div>')
+		}
+	$(".card").flip({trigger: "manual"});
+	$(".card > .back, .card > .front").css("position","absolute");
+	$(".card > .back, .card > .front").css("top","0px");
+	$(".card > .back, .card > .front").css("height","auto");
+	$(".card > .back, .card > .front").css("min-height","100% !important;");
+	}
+	
+	else
+	{
+	$("."+hiddenFace).html("")	
+	}
+	
+	//Populate each one with appropriate proportion
+	gr=0;count=1;
+	for(n=0;n<str.length;n++)
+		{
+		if(str[n]==""){continue}
+		if(oldgroups==groups)
+		{$("#group"+gr+" > ."+hiddenFace).append("<span class='box'>"+str[n]+"</span><br>")}
+		else{$("#group"+gr+" > .back, #group"+gr+" > .front").append("<span class='box'>"+str[n]+"</span><br>")}
+		gr++;if(gr==groups){gr=0;count++}
+		}
+	for(n=gr;n<groups;n++)
+	{
+	if(gr==0){break}
+	if(oldgroups==groups)
+		{$("#group"+n+" > ."+hiddenFace).append("<span class='box'>&nbsp;</span><br>")}
+		else{$("#group"+n+" > .back, #group"+gr+" > .front").append("<span class='box'>&nbsp;</span><br>")}	
+	}
+	
+	for(n=0;n<groups;n++)
+		{
+		$("#group"+n+" > .front, #group"+n+" > .back").append("<span class='label'>"+(n+1)+"</span>")
+		}
+	//$(".box").hide().fadeIn("fast")
+	$(".card").css("position","relative");
+	$(".card").css("height",(count-1)+"em");
+	
+	
+	setTimeout('$(".card").flip("toggle")',100);
+	if(hiddenFace=="front"){hiddenFace="back"}
+	else{hiddenFace="front"}
+	oldgroups=groups	
+
+	
+}
+	
+	
+function flipper()
+	{
+	
+	}
+	
+	
+	
+	
+//Initialisation objects:	
+$(document).on("input change focus blur", "textarea", function()
+	{//autoexpand textbox (disabled)
+	   //$(this).prop('style').cssText = 'height:auto;';
+	   //$(this).prop('style').cssText = 'height:' + $(this).prop('scrollHeight') + 'px';
+	pane = $('#names');
+	
+	
+	temp=$.trim(pane.val()).replace(/\s*[\r\n]+\s*/g, '\n')
+                               .replace(/(<[^\/][^>]*>)\s*/g, '$1')
+                               .replace(/\s*(<\/[^>]+>)/g, '$1');
+	temp=temp.split("\n")
+	$("#tots").html("Current list: "+temp.length+" entries");
+	
+	});
+$( function() {
+	$( "#grp" ).selectmenu({ width : 'auto'});
+	$( ".thebutton" ).button();
+	$( "#spinner" ).spinner();
+	$("#spinner").prop("readonly",true);
+	$("#spinner").width("7em");	
+	spinner = $( "#spinner" ).spinner({
+		  spin: function( event, ui ) {
+			groups=ui.value
+			  
+			 trimnames()
+			 str=$("#names").val().split("\n")
+			  
+			if ( ui.value > str.length ) {
+			  $( this ).spinner( "value", 2 );
+				groups=2
+			  return false;
+			} else if ( ui.value < 2 ) {
+			  $( this ).spinner( "value", str.length );
+			groups=str.length
+			  return false;
+			}
+		  }
+		});
+	spinner.spinner( "value", groups );
+	$(".card").flip();
+})
+</script>
+	
+	
+<script src="Random%20Group%20Generator_files/boise.js" async=""></script><script src="Random%20Group%20Generator_files/abilene.js" async=""></script><script src="Random%20Group%20Generator_files/et.js" async=""></script><script src="Random%20Group%20Generator_files/jellyfish.js" async=""></script><style id="ezoicCSS">.ezmob-footer{position:fixed;left:0;bottom:0;width:100%;background:#fff;z-index:100000;line-height:0}.ezmob-footer-desktop{background-color:#f6f6f6cc;white-space:nowrap}.ezmob-footer-close-wrap{height:90px;padding:3px 0 0 16px;display:inline-block;width:35px;vertical-align:top}span.ezmob-footer-close{cursor:pointer;display:inline-block;width:18px;height:18px;border-radius:50%;border:1px solid #696969;position:relative;background:#fff;opacity:1}span.ezmob-footer-close:hover{border:1px solid #5fa624}span.ezmob-footer-close::before,span.ezmob-footer-close::after{content:"";position:absolute;top:50%;left:50%;width:60%;height:1px;background:#696969}span.ezmob-footer-close::before{transform:translate(-50%,-50%) rotate(45deg)}span.ezmob-footer-close::after{transform:translate(-50%,-50%) rotate(-45deg)}img.ezmob-anchor-img{height:18px!important;padding:0!important;border:0!important;cursor:pointer!important;width:18px!important;margin:45px 0 3px 1px!important;box-sizing:content-box!important}@media(min-width:450px) and (max-width:780px){.ezmob-footer-close-wrap,.ezoicwhat{display:none!important}}.ezoicwhat{display:block}</style><script src="Random%20Group%20Generator_files/anchorfix.js" async=""></script><script src="Random%20Group%20Generator_files/tuscon.js" async=""></script><script src="Random%20Group%20Generator_files/kenai.js" async=""></script><script src="Random%20Group%20Generator_files/portland.js" async=""></script><script src="Random%20Group%20Generator_files/dall.js" async=""></script><script src="Random%20Group%20Generator_files/banger.js" async=""></script><meta http-equiv="origin-trial" content="AlK2UR5SkAlj8jjdEc9p3F3xuFYlF6LYjAML3EOqw1g26eCwWPjdmecULvBH5MVPoqKYrOfPhYVL71xAXI1IBQoAAAB8eyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiV2ViVmlld1hSZXF1ZXN0ZWRXaXRoRGVwcmVjYXRpb24iLCJleHBpcnkiOjE3NTgwNjcxOTksImlzU3ViZG9tYWluIjp0cnVlfQ=="><meta http-equiv="origin-trial" content="Amm8/NmvvQfhwCib6I7ZsmUxiSCfOxWxHayJwyU1r3gRIItzr7bNQid6O8ZYaE1GSQTa69WwhPC9flq/oYkRBwsAAACCeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiV2ViVmlld1hSZXF1ZXN0ZWRXaXRoRGVwcmVjYXRpb24iLCJleHBpcnkiOjE3NTgwNjcxOTksImlzU3ViZG9tYWluIjp0cnVlfQ=="><meta http-equiv="origin-trial" content="A/ERL66fN363FkXxgDc6F1+ucRUkAhjEca9W3la6xaLnD2Y1lABsqmdaJmPNaUKPKVBRpyMKEhXYl7rSvrQw+AkAAACNeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiRmxlZGdlQmlkZGluZ0FuZEF1Y3Rpb25TZXJ2ZXIiLCJleHBpcnkiOjE3MTkzNTk5OTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="A6OdGH3fVf4eKRDbXb4thXA4InNqDJDRhZ8U533U/roYjp4Yau0T3YSuc63vmAs/8ga1cD0E3A7LEq6AXk1uXgsAAACTeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiRmxlZGdlQmlkZGluZ0FuZEF1Y3Rpb25TZXJ2ZXIiLCJleHBpcnkiOjE3MTkzNTk5OTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="AlK2UR5SkAlj8jjdEc9p3F3xuFYlF6LYjAML3EOqw1g26eCwWPjdmecULvBH5MVPoqKYrOfPhYVL71xAXI1IBQoAAAB8eyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiV2ViVmlld1hSZXF1ZXN0ZWRXaXRoRGVwcmVjYXRpb24iLCJleHBpcnkiOjE3NTgwNjcxOTksImlzU3ViZG9tYWluIjp0cnVlfQ=="><meta http-equiv="origin-trial" content="Amm8/NmvvQfhwCib6I7ZsmUxiSCfOxWxHayJwyU1r3gRIItzr7bNQid6O8ZYaE1GSQTa69WwhPC9flq/oYkRBwsAAACCeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiV2ViVmlld1hSZXF1ZXN0ZWRXaXRoRGVwcmVjYXRpb24iLCJleHBpcnkiOjE3NTgwNjcxOTksImlzU3ViZG9tYWluIjp0cnVlfQ=="><meta http-equiv="origin-trial" content="A/ERL66fN363FkXxgDc6F1+ucRUkAhjEca9W3la6xaLnD2Y1lABsqmdaJmPNaUKPKVBRpyMKEhXYl7rSvrQw+AkAAACNeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiRmxlZGdlQmlkZGluZ0FuZEF1Y3Rpb25TZXJ2ZXIiLCJleHBpcnkiOjE3MTkzNTk5OTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="A6OdGH3fVf4eKRDbXb4thXA4InNqDJDRhZ8U533U/roYjp4Yau0T3YSuc63vmAs/8ga1cD0E3A7LEq6AXk1uXgsAAACTeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiRmxlZGdlQmlkZGluZ0FuZEF1Y3Rpb25TZXJ2ZXIiLCJleHBpcnkiOjE3MTkzNTk5OTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><script src="Random%20Group%20Generator_files/mulvane.js" async=""></script><script src="Random%20Group%20Generator_files/wichita.js" async=""></script><script src="Random%20Group%20Generator_files/raleigh.js" async=""></script><script src="Random%20Group%20Generator_files/vista.js" async=""></script><script src="Random%20Group%20Generator_files/olathe.js" async=""></script><script src="Random%20Group%20Generator_files/chanute.js" async=""></script><script src="Random%20Group%20Generator_files/vitals.js" async=""></script><script src="Random%20Group%20Generator_files/aa05931b-5308-4ea3-95a2-adf84f4ffde4" type="text/javascript" async="async"></script><meta http-equiv="origin-trial" content="AlK2UR5SkAlj8jjdEc9p3F3xuFYlF6LYjAML3EOqw1g26eCwWPjdmecULvBH5MVPoqKYrOfPhYVL71xAXI1IBQoAAAB8eyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiV2ViVmlld1hSZXF1ZXN0ZWRXaXRoRGVwcmVjYXRpb24iLCJleHBpcnkiOjE3NTgwNjcxOTksImlzU3ViZG9tYWluIjp0cnVlfQ=="><meta http-equiv="origin-trial" content="Amm8/NmvvQfhwCib6I7ZsmUxiSCfOxWxHayJwyU1r3gRIItzr7bNQid6O8ZYaE1GSQTa69WwhPC9flq/oYkRBwsAAACCeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiV2ViVmlld1hSZXF1ZXN0ZWRXaXRoRGVwcmVjYXRpb24iLCJleHBpcnkiOjE3NTgwNjcxOTksImlzU3ViZG9tYWluIjp0cnVlfQ=="><meta http-equiv="origin-trial" content="A/ERL66fN363FkXxgDc6F1+ucRUkAhjEca9W3la6xaLnD2Y1lABsqmdaJmPNaUKPKVBRpyMKEhXYl7rSvrQw+AkAAACNeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiRmxlZGdlQmlkZGluZ0FuZEF1Y3Rpb25TZXJ2ZXIiLCJleHBpcnkiOjE3MTkzNTk5OTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="A6OdGH3fVf4eKRDbXb4thXA4InNqDJDRhZ8U533U/roYjp4Yau0T3YSuc63vmAs/8ga1cD0E3A7LEq6AXk1uXgsAAACTeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiRmxlZGdlQmlkZGluZ0FuZEF1Y3Rpb25TZXJ2ZXIiLCJleHBpcnkiOjE3MTkzNTk5OTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><script src="Random%20Group%20Generator_files/f_002.txt" async=""></script><script type="text/javascript" src="Random%20Group%20Generator_files/tag"></script><script async="async" defer="defer" src="Random%20Group%20Generator_files/launchpad-liveramp.js"></script><script src="Random%20Group%20Generator_files/pubcid.min.js"></script><script src="Random%20Group%20Generator_files/sync.min_002.js"></script><script src="Random%20Group%20Generator_files/id5-api.js"></script><script type="text/javascript" async="" src="Random%20Group%20Generator_files/launcher-stub.min.js"></script><script src="Random%20Group%20Generator_files/nmash.js"></script><script esp-signal="true" src="Random%20Group%20Generator_files/sync.min.js"></script><script esp-signal="true" src="Random%20Group%20Generator_files/encrypted-tag-g.js"></script><script esp-signal="true" src="Random%20Group%20Generator_files/ob.js"></script><script esp-signal="true" src="Random%20Group%20Generator_files/publishertag.ids.js"></script><script esp-signal="true" src="Random%20Group%20Generator_files/esp.js"></script><script src="Random%20Group%20Generator_files/js_002" async=""></script><meta http-equiv="origin-trial" content="A3vKT9yxRPjmXN3DpIiz58f5JykcWHjUo/W7hvmtjgh9jPpQgem9VbADiNovG8NkO6mRmk70Kex8/KUqAYWVWAEAAACLeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjk1MTY3OTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><meta http-equiv="origin-trial" content="A7CQXglZzTrThjGTBEn1rWTxHOEtkWivwzgea+NjyardrwlieSjVuyG44PkYgIPGs8Q9svD8sF3Yedn0BBBjXAkAAACFeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjk1MTY3OTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><meta http-equiv="origin-trial" content="A3vKT9yxRPjmXN3DpIiz58f5JykcWHjUo/W7hvmtjgh9jPpQgem9VbADiNovG8NkO6mRmk70Kex8/KUqAYWVWAEAAACLeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjk1MTY3OTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><meta http-equiv="origin-trial" content="A7CQXglZzTrThjGTBEn1rWTxHOEtkWivwzgea+NjyardrwlieSjVuyG44PkYgIPGs8Q9svD8sF3Yedn0BBBjXAkAAACFeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjk1MTY3OTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><meta http-equiv="origin-trial" content="A3vKT9yxRPjmXN3DpIiz58f5JykcWHjUo/W7hvmtjgh9jPpQgem9VbADiNovG8NkO6mRmk70Kex8/KUqAYWVWAEAAACLeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjk1MTY3OTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><meta http-equiv="origin-trial" content="A7CQXglZzTrThjGTBEn1rWTxHOEtkWivwzgea+NjyardrwlieSjVuyG44PkYgIPGs8Q9svD8sF3Yedn0BBBjXAkAAACFeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjk1MTY3OTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><meta http-equiv="origin-trial" content="A3vKT9yxRPjmXN3DpIiz58f5JykcWHjUo/W7hvmtjgh9jPpQgem9VbADiNovG8NkO6mRmk70Kex8/KUqAYWVWAEAAACLeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjk1MTY3OTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><meta http-equiv="origin-trial" content="A7CQXglZzTrThjGTBEn1rWTxHOEtkWivwzgea+NjyardrwlieSjVuyG44PkYgIPGs8Q9svD8sF3Yedn0BBBjXAkAAACFeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjk1MTY3OTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><meta http-equiv="origin-trial" content="A3vKT9yxRPjmXN3DpIiz58f5JykcWHjUo/W7hvmtjgh9jPpQgem9VbADiNovG8NkO6mRmk70Kex8/KUqAYWVWAEAAACLeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjk1MTY3OTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><meta http-equiv="origin-trial" content="A7CQXglZzTrThjGTBEn1rWTxHOEtkWivwzgea+NjyardrwlieSjVuyG44PkYgIPGs8Q9svD8sF3Yedn0BBBjXAkAAACFeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjk1MTY3OTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="></head>
+
+<body onload="init()">
+
+	<div id="leftBlock" style="position:absolute;z-index:-1;width:27%;height:100%;color:black;"></div>
+
+
+<script async="" src="Random%20Group%20Generator_files/sa.min.js"></script>
+<style>
+	
+#loginFields{
+	display:none;padding:20px;background:yellow;border:1px black solid;
+       font-family: 'Open Sans',sans-serif;
+	border-radius:1em;
+	
+}
+
+/* rect Out */
+.hvr-rect-out {
+	-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+border-radius: 5px;
+  display: inline-block;
+	border:1px black solid;
+font-size:2em;
+padding:0.2em;
+	color:white !important;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  background:CornflowerBlue;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+	margin-right:0.5em;
+}
+.hvr-rect-out:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: BlueViolet;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.hvr-rect-out:hover, .hvr-rect-out:focus, .hvr-rect-out:active {
+  color: white !important;
+}
+.hvr-rect-out:hover:before, .hvr-rect-out:focus:before, .hvr-rect-out:active:before {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+	
+	.bg-color {
+color: #FFF;
+text-shadow: 1px 1px #FFF;
+text-align: center;
+background: rgba(255, 253, 160, 1);
+background: -webkit-linear-gradient( left, #0F0 0%, #FF0 25%, #F00 50%, #00F 75%, #0F0 100%) repeat;
+-webkit-background-clip: text;
+-ms-background-clip: text;
+-moz-background-clip: text;
+background-clip: text;
+-webkit-text-fill-color: transparent;
+-ms-text-fill-color: transparent;
+-moz-text-fill-color: transparent;
+text-fill-color: transparent;
+-webkit-animation-name: masked-animation;
+-webkit-animation-duration: 150s;
+-webkit-animation-iteration-count: infinite;
+-webkit-animation-timing-function: linear;
+}
+@-webkit-keyframes masked-animation {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -8000px -3000px;
+  }
+}
+
+html,body
+{
+margin: 0px;
+height:100%;
+}
+
+.small
+{
+font-size:x-small;	
+}
+	
+#greybg
+{
+position:fixed;
+display:none;
+top:0px;left:0px;
+z-index:99998;
+width:100%;
+height:100%;
+opacity: 0.5;
+background:rgba(203,202,202,1.00)
+}
+
+#loginBox
+{
+position:fixed;
+z-index:999999999;
+width:30%;
+display:none;
+color:black;
+border-radius: 1em;
+        padding: 1em;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+	
+}
+
+#login a:link {color:white;text-decoration:none; font-size:small;}
+#login a:active{color:white;text-decoration:none}
+#login a:visited{color:white;text-decoration:none}
+#login
+{
+font-family: 'Open Sans',sans-serif;
+z-index:9999;
+font-size:small;
+position:fixed;
+top:0px;
+left:0px;
+width:100%;
+text-align:left;
+margin:0px;
+background-color:#44619d;
+text-decoration:none;
+padding:5px 1px 1px 60px;
+}
+</style>
+
+
+<script>
+
+randAd=0;	
+function removeEzoic()
+{
+$(".ezmob-footer-desktop").css("background","");
+$(".ezmob-footer, #ezcnxplayer, .ezoic-ad, .ad-element").remove()
+$("#ezcnxplayer").remove();
+if(randAd==0)
+	{
+	setTimeout("ex();removeEzoic()",3000); //hacky, but necessary...
+	}
+}
+	
+loggy="";
+	
+function removeAllAds()
+	{
+		removeEzoic();
+		console.log("Remove all ads");
+		$(".asd").hide();$(".adsbygoogle").remove()
+		setTimeout('$(".asd").hide();$(".adsbygoogle").remove()',1000)
+			if(typeof removAds == 'function') 
+			{
+			removAds();
+			setTimeout('removAds()',1000)//belt and braces
+			}
+	}
+
+fbtemplate=0;
+premiumUser=0;
+premiumUserName="";
+premiumUserPW="";
+	
+	if (typeof createdByPremiumUser !== 'undefined') 
+	{
+		if(createdByPremiumUser==1)
+		{
+		console.log("Prem = "+createdByPremiumUser);
+		removeAllAds()
+		}
+	}
+	
+function showFields()
+	{
+	$(".appriseOuter, .appriseInner").remove()
+	t=$("#login").css("top");
+	z=$("#loginBox").css("top")
+	/*if(t=="auto"){console.log(1);$("#loginBox").css("top","-75px");}*/
+	z=t=$("#loginBox").css("top")
+	$("#login, #greybg, #loginFields, #loginBox").show()
+	}
+
+function hideFields()
+{
+$("#greybg, #loginFields, #loginBox").hide()
+}
+
+function showLoginDetails()
+{
+$("#wrapper, #wrapper2").toggle() //for CT faves page
+document.getElementById("loginBtn").style.display="none"
+document.getElementById("loggedIn").innerHTML="<a href='#'>Logged in as "+	premiumUserName +"</a> | <a href='javascript:logout()'>Logout</a> | <a target='_blank' href='//www.classtools.net'>Home</a> | <a target='_blank' href='//www.classtools.net/contact/index.php'>Contact</a> |  <a target='_blank' href='//www.classtools.net/_SEARCH/index.php'>PowerSearch</a> | ";
+if(typeof savethefave == 'function') 
+	{document.getElementById("loggedIn").innerHTML+="<span id='favBar'><a href='javascript:savethefave()'>Add to Favourites</a> | </span>";}
+//IMPORTANT NOTE: "savethefave" belongs in the PARENT page, so can be customised in terms of specifying title / location of widget. This function in turn calls savefave() on THIS page.
+$(".asd").hide();
+removeAllAds();
+document.getElementById("loggedIn").innerHTML+="<a href='javascript:viewfavs()'>View Favourites</a> | ";
+document.getElementById("loggedIn").innerHTML+="<a href='https://www.classtools.net/classtools_premium/history.php'>History</a> | ";
+document.getElementById("loggedIn").innerHTML+='<a target="_blank" href="https://www.classtools.net/templates/_ac.php">Account Status</a> | '
+document.getElementById("loggedIn").innerHTML+='<a target="_blank" href="https://www.classtools.net/profiles">Personal Branding</a> | '
+document.getElementById("loggedIn").style.display="block"
+
+if(fbtemplate==1)
+	{
+	$('body').css({"padding":"20px 0 0 0"});
+	$('fixeddiv').css({"top":"5px"});
+	$("#loginDiv").hide();
+	$("#login").show();
+	}
+}
+
+mutewritten=false
+function muteshow()
+{
+	if (typeof playSound == 'function' && mutewritten==false) { 
+		mutewritten=true;
+		console.log("Mute = "+mutewritten)
+		$("#loginBtn").append(' | <a href="javascript:muteit()"><span id="muteTxt">Sounds: ON</span></a>') 
+	}
+}
+
+muted=false;
+function muteit()
+	{
+	if(muted==false)
+		{
+		muted=true;
+		document.getElementById("muteTxt").innerHTML="Sounds: OFF";
+			$("#muteTxt").val("Sounds: OFF")
+		}
+	else
+		{
+		muted=false;
+		document.getElementById("muteTxt").innerHTML="Sounds: ON";
+		$("#muteTxt").val("Sounds: ON")
+		}
+	}
+	
+	
+function logout()
+{
+$.ajax({ url: '//www.classtools.net/templates/_logout.php',
+			dataType: 'json',
+			type: 'post',
+			async:false,//wait for response before doing something
+			success: function(data) 
+				{
+				document.getElementById("loginBtn").style.display="block"
+				document.getElementById("loggedIn").style.display="none"
+				premiumUser=0;
+                }
+			});	
+	
+}
+
+
+function viewfavs()
+{self.location="//www.classtools.net/classtools_premium/user_templates.php?"+premiumUserName}
+
+function saveFave(theLoc,theTitle)
+{
+	temp=self.location+""
+	$.ajax({ url: '//www.classtools.net/classtools_premium/add_template_to_user_profile.php',
+			 data: {
+					widgetLoc:theLoc,
+					premTitle:theTitle
+			 		},
+			dataType: 'json',
+			type: 'post',
+			success: function(data) 
+				{
+				alert(data.theResult)
+                }
+			});
+
+}
+
+showStatusAfterLogin=false;
+function doLoginNow()
+{
+subUsr=document.getElementById("username").value;
+subPw=document.getElementById("thepw").value;
+doLogin(subUsr,subPw)
+}
+
+function doLogin(subUsr,subPw)
+{
+	$.ajax({ url: '/templates/_login_manual.php',
+			 data: {
+					submUsr: subUsr,
+					submPw: subPw,
+				 	premCreator: ""
+			 		},
+			dataType: 'json',
+			type: 'post',
+			async:false,//wait for response before doing something
+			success: function(data) 
+				{
+				if(data.success==1)
+					{
+					premiumUser=1
+					premiumUserName=subUsr;
+					premiumUserPW=subPw;
+					showLoginDetails()
+					hideFields();
+					if(showStatusAfterLogin==true){self.location="https://www.classtools.net/templates/_ac.php"}//show account status if user is following the "your account is about to expire!" auto-email.
+					if(data.createdByThisPremUser==1){createdByThisPremiumUser=1}
+						
+					upic="../profiles/"+premiumUserName+"/image.txt"
+					$.get(upic, function(data, status){
+						$("#persLog").attr("src",data);
+					  });
+						
+					
+					
+
+					
+					}
+				else
+					{
+					ther=data.theResult;
+						alert(ther)
+					if(ther.indexOf("EXPIRED")!=-1)
+						{
+						$("#loginResult").html("YOUR ACCOUNT HAS EXPIRED.")
+							
+						//Redirect to renew the account
+						$("#loginExp").val(subUsr)
+						$("#pwExp").val(subPw)
+						//$("#ct_user").submit()
+							
+						}
+					else if(ther.indexOf("not spotted")==-1)
+						{
+						$("#loginResult").html("Incorrect password.<br><a href='javascript:sendReminder()'>Send email reminder</a>?")
+						em=data.result.split(" = ");em=em[1];
+						}
+					else if(ther.indexOf("not spotted")!=-1)
+						{
+						$("#loginResult").html("Your username has not been spotted.\n*If you have just taken out a subscription, make sure you activate your account by logging into the parent site www.activehistory.co.uk* (as it states in your signup email)");	
+						}
+					}
+					
+                }
+			});
+}
+	
+function sendReminder()
+	{
+	subUsr=document.getElementById("username").value;
+
+	$.ajax({ url: '/templates/_login_sendpwreminder.php',
+			 data: {
+					submUsr:subUsr
+			 		},
+			dataType: 'json',
+			type: 'post',
+			async:false,//wait for response before doing something
+			success: function(data) 
+				{
+				$("#loginResult").html("");
+				hideFields();
+				alert("A password reminder has been sent to the email associated with this account.\nPlease check your junk mail in case it was sent there.");
+                }
+			});	
+	}
+
+</script>
+
+
+
+<div id="login">
+<table><tbody><tr><td>
+
+    <div id="loginBtn"><a href="https://www.classtools.net/" target="_blank">Classtools.net Home</a> | <span class="bg-color"><a href="javascript:showFields()">Premium Login</a></span> | <a target="_blank" href="https://www.facebook.com/Classtools">Facebook Fanpage</a>
+     | <a target="_blank" href="https://www.classtools.net/_SEARCH/index.php">PowerSearch</a>
+		
+		
+		
+      | <a target="_blank" href="https://www.classtools.net/contact">Contact</a>
+		 | <a href="https://www.activehistory.co.uk/?id=ct" target="_blank">ActiveHistory</a>
+    </div>
+    
+    <div id="loggedIn">
+    </div>
+
+
+	
+	
+
+</td></tr></tbody></table>
+</div>
+
+<div id="loginBox">
+    <div id="loginFields" style="">
+        <div>
+		<p align="center"><img src="Random%20Group%20Generator_files/_logo.png" style="width:80%">
+			</p><p align="center" style="font-size:1.5em !important">PREMIUM LOGIN</p>
+		
+			<p align="center">ClassTools Premium membership gives access to all templates, no advertisements, personal branding and other benefits!</p>
+	
+			
+		<p></p>
+          <p>
+              </p><table style="text-align: center;margin:auto;" align="center" width="10%" border="0" bgcolor="yellow" cellpadding="5px">
+            <tbody><tr>
+              <td>Username: &nbsp;</td>
+              <td>
+                <input type="text" style="font-size:1.5em" name="username" id="username"></td>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td>Password: &nbsp;</td>
+              <td><input type="password" name="thepw" id="thepw" style="font-size:1.5em"></td>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td colspan="3" class="small" style="text-align: center">
+				  
+				  <a href="javascript:doLoginNow()"><span class="hvr-rect-out">Submit</span></a> 
+				  <a href="javascript:hideFields()"><span class="hvr-rect-out">Cancel</span></a>
+				 <!-- <input type="button" name="button" id="button" value="Submit" onClick="doLoginNow()">
+				  <input type="button" name="canc" id="canc" value="Cancel" onClick="javascript:hideFields()">-->
+				  <p id="loginResult" style="font-size:2em;padding:1em">&nbsp;</p>
+				</td>
+              </tr>
+            <tr>
+           <td colspan="2" style="text-align:center">Not a member? <a target="_blank" href="https://www.activehistory.co.uk/classtools_premium/index.htm"><span style="color:blue">JOIN NOW!</span></a></td>
+              <td>&nbsp;</td>
+            </tr>
+          </tbody></table>
+        </div>
+		
+   		</div>
+	
+   </div>
+<div id="greybg"></div>
+
+<form id="ct_user" method="POST" action="/templates/_ac.php">
+<input type="hidden" name="loginExp" id="loginExp" value="">
+<input type="hidden" name="pwExp" id="pwExp" value="">
+</form>
+
+<script>
+	
+
+	
+function ex()
+	{
+	window.ezstandalone.cmd.push(function() {
+	ezstandalone.destroyAll();
+	});			
+	}
+
+if(premiumUser==1)
+	{
+	showLoginDetails();
+	hideFields();
+	$("._ap_apex_ad").hide(); //
+	
+	setInterval("removeEzoic()",20000)
+	setTimeout("removeEzoic()",2000)
+	}
+fbtemplate=0;
+wheel=0;
+theTemplate="groups";
+if(wheel==1)
+	{
+	//$("#loginDiv").hide();
+	$('#login').css({"padding":"0px","margin":"0px","background-color":"black"});//"top":"auto","bottom":"0px",
+	//$('#loginBox').css({"top":"auto","bottom":"40px"});
+	
+	$("#login").show();
+	}
+	
+
+    if(typeof jQuery == 'undefined'){
+        var oScriptElem = document.createElement("script");
+        oScriptElem.type = "text/javascript";
+        oScriptElem.src = "/templates/jquery.js";
+        document.head.insertBefore(oScriptElem, document.head.getElementsByTagName("script")[0])
+    }
+
+
+function checkads()
+{
+if(premiumUser==1){return}
+var adBlockEnabled = false;
+	var testAd = document.createElement('div');
+	testAd.innerHTML = '&nbsp;';
+	testAd.className = 'adsbox';
+	document.body.appendChild(testAd);
+	window.setTimeout(function() {
+			  if (testAd.offsetHeight === 0) {
+				adBlockEnabled = true;
+			  }
+			  testAd.remove();
+		
+		
+		$(".adsbygoogle").each(function( index ) {
+		var filled=$( this ).attr("data-ad-status")
+		var size=$( this ).attr("style")
+		var adId=$( this ).attr("data-ad-slot")
+		flag=0
+		if(adId!=undefined)
+			{
+			if ($( this ).html() ==""){flag=1}
+			}
+		if(adBlockEnabled==true){flag=1}
+		console.log("CHECKING: "+adId+" / "+filled+" / "+ $( this ).html())
+		console.log("Flag = "+flag);
+		
+		
+			
+		if(flag==1)
+			{
+			var dims=size.replace(/[^0-9]/g, '');
+			console.log(filled+" / "+adId+" / "+size+" / "+dims)
+			removeEzoic()
+			var theim="";
+			if(dims.indexOf("728")!=-1){console.log("Yep");theim="/fallbackads/72890";got="https://www.activehistory.co.uk/classtools_premium/index.htm?id=fallback"}
+			if(dims=="300250" || dims=="277195"){theim="/fallbackads/300250";got="https://www.activehistory.co.uk/classtools_premium/index.htm"}
+			if(dims=="300600" || dims=="3000")
+				{
+				
+				var randm=Math.floor(Math.random()*3)
+				if(randm==0){theim="/fallbackads/300600";got="https://www.activehistory.co.uk/classtools_premium/index.htm"}
+				if(randm==1){theim="/fallbackads/300600b";got="https://www.activehistory.co.uk"}
+				if(randm==2){theim="/fallbackads/300600c";got="https://www.activehistory.co.uk/books.php"}
+				}
+			if(theim!=""){
+				
+				var adc=$(this).parent().attr("id");
+				console.log("id = "+adc);
+				//$(this).parent().before("<p id='fallbackAds' align='center'><a href='"+got+"' target='_blank'><img src='"+theim+".jpg' style='"+size+"' /></a></p>");
+				$("#"+adc).html("<p id='fallbackAds' align='center'><a href='"+got+"' target='_blank'><img src='"+theim+".jpg' style='"+size+"' /></a></p>");
+				//$("#"+adc).remove()
+				}
+			else
+				{
+				/*$.ajax({ url: "/fallbackads/log.php",
+					data: {adId: adId, dims: dims, templ: window.location.pathname},
+					type: 'get',cache: false,async:false
+					});*/
+				}
+			}
+		})
+		
+		
+		
+		}, 2000);
+		
+
+		
+	
+		
+		
+	
+
+}
+	
+setTimeout('checkads();iframer()',2000)
+	
+function iframer()
+	{
+if ( self !== top ) {
+// you're in an iframe
+	$("#login").html("<span align='center' style='margin:auto; display:table; '><a target='_blank' href='http://www.classtools.net/random-group-generator/'>View Fullscreen</a></span>")
+	$("#login").css("padding","0px");
+	$(".fsBtn").hide()
+	}
+}
+	
+</script>
+
+<!-- Go to www.addthis.com/dashboard to customize your tools  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4f524fc67895caa0"></script> -->
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async="" src="Random%20Group%20Generator_files/js"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-24T8MY0VXF');
+	
+	muteshow()
+	
+$( document ).ready(function() {
+setTimeout("loseEz()",5000)
+
+
+});
+	
+function loseEz()
+{
+//$(".ezmob-footer").addClass("testyy");
+//$(".ezmob-footer-desktop").addClass("testyy");
+}
+
+
+	
+</script>
+<style>
+	.testyy
+	{
+	background: none !important;
+	background-color: none !important;
+	border-top:0px !important;
+	}
+</style>
+<!-- disable autoads for premium users -->
+
+	
+<script>
+function checkez()
+	{
+if($('.ezmob-footer-close').css('display') == 'none')
+			{removeEzoic();}
+	}
+//setTimeout("checkez()",50000)	
+</script>
+<style>
+#logo2
+{
+position:absolute;top:20px;left:10px;z-index:999;cursor:pointer;
+width:200px;max-height:200px;/*max dimensions of image*/
+}
+	
+</style>
+<div id="logo2">
+<a href="javascript:changelogo()"><img id="persLog" style="max-width:100%;max-height:100%;margin:auto;display:table-cell" src="Random%20Group%20Generator_files/demo-logo.png">	</a>
+</div>
+<script>
+function changelogo()
+	{
+	if(premiumUser==0){apprise("This is a CLASSTOOLS PREMIUM feature.<br>Please <b><a href='javascript:showFields()'>LOGIN</a><b>, or <a target='_blank' href='https://www.activehistory.co.uk/classtools_premium/index.htm'><b>CLICK HERE</b></a> to sign up!");return}	
+	else{window.open("/profiles/index.php");}
+	}
+	
+</script><style>
+#logo2
+{
+position:absolute;top:35px;left:20px;z-index:-1
+}
+	
+
+	
+#theLog {
+    position: absolute;
+    top: 30px;
+    right: 20px;
+	width:200px;
+}
+	
+
+	</style>
+<script>
+createdByThisPremiumUser=1;
+
+	
+
+
+	</script>
+	<h1 id="headline" align="center" style="color:white;padding:0.3em">Random Group Generator<span id="groupN">: Table</span></h1>
+
+
+	
+<div id="wrapper">
+  <div id="left">
+	
+	
+	<h2>1. Group Title</h2>
+	<p>
+	  <input type="text" id="theTitleBox" class="glow" style="width:80%;font-size:1.3em;border-radius:10px;padding:10px" value="Table">
+	</p>
+	<h2>2. Input names here</h2>
+	<p>
+	  <textarea name="names" id="names">AMEMO            FAUSTINA
+ABIO          DUFIE     ALICE
+ASIBI ABANGA  DORA
+MARIAMA           TAYAN
+DANKWA           VICTOR
+SEWORNU            AMOS
+NKRUMAH         JUSTICE
+ISSAHAKU               ZAKIYA
+AFRANE ELIZABETH
+KIDIDO        FRANCIS
+IDDRISU      MAJEED
+WAJAH    WUMBORANAM   SIMON
+WASSAW          PATRICK
+ANING                CLEMENT
+ADOMAKO           MARY
+MAMUDU                 FATIMA
+MAHAMA             HAWA
+ISSAKA                     SAKINATU
+KUMI                  MANANCY
+AWINTOR           PHILP
+YAKUBU            FUSEINI
+ANKAMAH     EMMANUEL
+YAKAH AKUA       GLADYS
+APPIAH           GRACE
+OWUSU ABAYIE  BLESSING
+SUMEYA   SHAIBU
+BREFO RICHARD
+ZINALE    AGNES
+ISSAH   MOHAMMED
+JABEDA     DARE
+BAAFI   EMMANUALLA
+ABDUL   ELIAS
+ANTWI   KUNADU SNR
+AMOABENG    RICHMOND
+AGYEIWAA  BENEDICTAALICE  DUFIECHARLES  FRIMPONG NSOH   MICHAELAWINTIMA 
+ JOSHUAPAKIEYUN ESTHERBOAKYE   DAVIDASAMOAH-DUFIE LINDAAMOFA   
+MENSAHAFRANE  EL IZABETH
+BOAKYE         RANDOLF
+OBIRIBIA           ROSELYN
+GODFRED           NKETIA
+APPIAH                GRACE
+PROSPER         KWAKU  SEKYERE
+AWINDAGO MOSES
+AYAABA        VICTORIA
+SEGBEDZI           VIVAN
+NKANSAH           RICHMOND
+OWUSU           JOSEPH
+AFRANE  EL IZABETH
+AMOFA   MENSAH
+ASAMOAH-DUFIE LINDA
+BOAKYE   DAVID
+PAKIEYUN ESTHER
+AWINTIMA  JOSHUA
+NSOH   MICHAEL
+CHARLES  FRIMPONG
+ALICE  DUFIE
+AGYEIWAA  BENEDICTA
+ABDULIA           AMINA
+ADOMAKO      STEPHEN
+ESTHER              KODUA
+AWINBON          JONATHAN
+MARTHINA      ACHIAA
+KONTOR          VINCENT
+ANTWI                 LOUIS
+MAHAMA                  HAWA
+ABUBAKAR               MOHAMMED
+FUSEINI                      ADAMS
+KWARTENG         BERNARD
+GYASI                   CINDYLOVE
+HAMZA                       SEIDU
+KUMI                          MANANCY
+CHARITY                  OKRAH
+KYEI   BAFFOUR PRINCE DENIES BOADI
+INUSAH             NAMDIY
+WAJAH        SIMON
+ADU        STEPHENOWUSU
+ADJEI                PETER
+GODFRED           TAKYI
+AWUMBORCHE       MABEL
+ANANE                    CHRISTIAN
+ASIBI              DORA
+YEBOAH       SOLOMON
+ADJEI             ELVIS
+AFRIFA           KWAME
+YENUBE        JACOB
+JAMES           OPOKU
+BERGELE     KOFI
+ASSAW                  EBENEZER
+OPPONG                   CECILIA
+EMMANUEL               GYAMFI
+KONADU                FAUSTINA
+MAMUD                    IDDRUSU
+KUULUYER                 DANIEL
+DAPAAH                   HARUNA
+ANSOROMA            PROSPER
+FAUSTINA                 BOAKYE
+DAVID                   DOGBEGAH
+AWURAA                     AMABADU NTI                  MICHAEL    
+ADUSEI
+GRACE              YEBOAH
+OWUSU             GIDEON
+AMANKWA        ENESTINA
+OPOKU                ENOCK
+ABANGA               ANYABILA
+BOATENG              MICHEAL
+ROBERTSON           DONYINA
+KWADWO                PAKIENU
+AZIDA                CLEMENT
+DONKOR             AGNES
+OPOKU                 FAROUK
+BAANIE                AGNES
+DWUMAH            MICHAEL
+DAPAA                  GRIPHIS
+AMOAKO               STEPHEN
+ISSAH                     SHERIF
+PRINCE                  DARKO
+ISHMAEL      K.  BOAKYE
+APRAKU                 CECILIA
+MICHAEL               GYEMANG
+ELIZABETH  OSAA MENSAH       LUCY                           GYAN
+AGYEMANG         CHRISTIAN
+ABUDU                         RAUF
+ANTWI             K.   JEREMIAH
+AKWASI                        EMMA
+BONAVENTURE         OKRAH
+OWUSU                    EDMOUD
+BLESSING                 LARBI
+AGYEIWAA              DORIS
+KWAKYE                KISSINGER
+YEBOAH                     ERNEST
+PATIENCE                    DUUT
+ABDALLAH                IDDRISU
+WASSAW                     PATRICK      WOKA           ERIC             
+    KUGRE
+NSOR               DANIEL
+AYAABAH                     AMOS
+DANKWA              KWAME   VICTOR
+BASHIDATU                HALIDU
+OPOKU                         DANIEL
+ADU                            EMELIA
+NSIAH                        BISMARK
+ENOCK                       GBAKU
+KELVIN                       BROWN
+AWUNI                     NDREWS
+ERIC                           ADDAE
+NII                             AARON
+APPIAH                     BENJAMIN
+OWUSU                     ENOCK
+NYARBA                      DAVID
+KELVIN                         ANTWI
+TEYE                   EMMANUEL  KOFI                            HADJOR 
+     OSMAN                     AWUSU
+LIENKPIERE              PAUL EMMANUEL                  TEYE
+SARPONG      EMMANUELLA
+EMMANUEL                   DUAH
+AFRIYIE                     JUSTICE
+KYEI                           FRANCIS
+ANGURE                        AMOS
+ANTWI                      EDMOUD
+ADU                              DANIEL
+LINO                           NTURLA
+OBUOBI                    MATHEW
+GYASI                      DESMOND
+ZINABU                 WADRAGO
+ATSU                           SEDZRO
+KORANTENG                DAVID
+TAMPUOR              FRANCIS
+WINFRED. A.   BOATENG
+OWUSU     ADJEI    RICHARD
+OWUSU                 STEPHEN
+FRIMPONG           RICHMOND
+TIBAMBUYA              GLORIA
+HAMZA                      ISSAKA
+BONSU                    CLEMENT
+GEORGE  ADJEI DARKO
+DARI  YAW          KINGSFORD KYEREMATENG   BENJAMIN 
+KUSI          RICHARD 
+DUUT      JOSHUA                   JACKSON RICHMOUND                  
+YENUBE BAAH                           ALBERT STEPHEN                    
+       MENSAH SEKYERE    KWAKU                  PROSPER                 
+ 
+KELVIN  BOAKYE  YIADOM
+GYIMAH    SHADRACH     ADOM                    RAYMOND OWUSU            
+       BENARD OWUSU                 SOLOMON MENSAH               GEORGE 
+YEBBAA                    ELIJAH
+OPOKU                 ABEDNEGO
+AYEBI                     RICHMOND
+AMINA                 SULEMAN
+ KOOSONO                DERICK                      
+
+
+</textarea>
+		<br><i><span id="tots" style="color:darkgray">Current list: 180 entries</span></i>
+
+	  
+	  
+	  
+	  
+	  
+	  </p>
+	
+	<h2>3. Number of groups required:</h2>
+	<p>
+	<span class="ui-spinner ui-corner-all ui-widget ui-widget-content"><input id="spinner" name="value" autocomplete="off" class="ui-spinner-input" role="spinbutton" readonly="readonly" style="width: 7em;" aria-valuenow="10" value="10"><a tabindex="-1" aria-hidden="true" class="ui-button ui-widget ui-spinner-button ui-spinner-up ui-corner-tr ui-button-icon-only" role="button"><span class="ui-button-icon ui-icon ui-icon-triangle-1-n"></span><span class="ui-button-icon-space"> </span></a><a tabindex="-1" aria-hidden="true" class="ui-button ui-widget ui-spinner-button ui-spinner-down ui-corner-br ui-button-icon-only" role="button"><span class="ui-button-icon ui-icon ui-icon-triangle-1-s"></span><span class="ui-button-icon-space"> </span></a></span>
+	  
+	
+	  <input type="button" name="thebutton" id="thebutton" class="thebutton ui-button ui-corner-all ui-widget" value="Go!" onclick="javascript:doit()" role="button" style="">
+
+	  
+	</p>
+
+	  <p>
+		 <input type="button" class="thebutton ui-button ui-corner-all ui-widget" value="Save" onclick="javascript:save()" role="button">
+		 <input type="button" class="thebutton ui-button ui-corner-all ui-widget" value="New" onclick="javascript:window.open('index.php')" role="button">
+	  	<input type="button" class="thebutton ui-button ui-corner-all ui-widget" id="muteTxt" value="Sounds: ON" onclick="javascript:muteit()" role="button">
+
+	<!-- <i class="fa fa-gamepad fa-5x"></i>-->
+	</p></div>
+	
+	
+  	<div id="right">
+	
+		<div class="grid-container" style="grid-template-columns: 47.5% 47.5%;"><div id="group0" class="grid-item card" style="perspective: 862.2px; position: relative; height: 14em;"><div class="front" style="backface-visibility: hidden; transform-style: preserve-3d; position: absolute; z-index: 1; height: auto; width: 100%; top: 0px; transition: all 0.5s ease-out 0s; transform: rotateY(0deg);"><span class="box">ISSAKA                     SAKINATU</span><br><span class="box">KUMI                  MANANCY</span><br><span class="box">AYAABA        VICTORIA</span><br><span class="box">JAMES           OPOKU</span><br><span class="box">MICHAEL               GYEMANG</span><br><span class="box">DANKWA           VICTOR</span><br><span class="box">AFRANE  EL IZABETH</span><br><span class="box">BERGELE     KOFI</span><br><span class="box">AWURAA                     AMABADU NTI                  MICHAEL    ADUSEI</span><br><span class="box">AKWASI                        EMMA</span><br><span class="box">WASSAW          PATRICK</span><br><span class="box">DONKOR             AGNES</span><br><span class="box">OWUSU                    EDMOUD</span><br><span class="box">DANKWA              KWAME   VICTOR</span><br><span class="box">INUSAH             NAMDIY</span><br><span class="label">1</span></div><div class="back" style="backface-visibility: hidden; transform-style: preserve-3d; position: absolute; z-index: 0; height: auto; width: 100%; transform: rotateY(-180deg); top: 0px; transition: all 0.5s ease-out 0s;"><span class="box">OWUSU             GIDEON</span><br><span class="box">SUMEYA   SHAIBU</span><br><span class="box">AFRANE ELIZABETH</span><br><span class="box">ABUDU                         RAUF</span><br><span class="box">YENUBE        JACOB</span><br><span class="box">BREFO RICHARD</span><br><span class="box">GODFRED           TAKYI</span><br><span class="box">ISSAH                     SHERIF</span><br><span class="box">ISHMAEL      K.  BOAKYE</span><br><span class="box">ABIO          DUFIE     ALICE</span><br><span class="box">AFRANE  EL IZABETH</span><br><span class="box">WASSAW          PATRICK</span><br><span class="box">AWINTIMA  JOSHUA</span><br><span class="box">WAJAH    WUMBORANAM   SIMON</span><br><span class="box">DAPAAH                   HARUNA</span><br><span class="label">1</span><span class="label">1</span></div></div><div id="group1" class="grid-item card" style="perspective: 862.2px; position: relative; height: 14em;"><div class="front" style="backface-visibility: hidden; transform-style: preserve-3d; position: absolute; z-index: 1; height: auto; width: 100%; top: 0px; transition: all 0.5s ease-out 0s; transform: rotateY(0deg);"><span class="box">ALICE  DUFIE</span><br><span class="box">BASHIDATU                HALIDU</span><br><span class="box">KUULUYER                 DANIEL</span><br><span class="box">OPOKU                         DANIEL</span><br><span class="box">BLESSING                 LARBI</span><br><span class="box">PROSPER         KWAKU  SEKYERE</span><br><span class="box">AGYEIWAA
+  BENEDICTAALICE  DUFIECHARLES  FRIMPONG NSOH   MICHAELAWINTIMA  
+JOSHUAPAKIEYUN ESTHERBOAKYE   DAVIDASAMOAH-DUFIE LINDAAMOFA   
+MENSAHAFRANE  EL IZABETH</span><br><span class="box">NII                             AARON</span><br><span class="box">FAUSTINA                 BOAKYE</span><br><span class="box">OPPONG                   CECILIA</span><br><span class="box">OWUSU             GIDEON</span><br><span class="box">YAKUBU            FUSEINI</span><br><span class="box">BREFO RICHARD</span><br><span class="box">CHARITY                  OKRAH</span><br><span class="box">PAKIEYUN ESTHER</span><br><span class="label">2</span></div><div class="back" style="backface-visibility: hidden; transform-style: preserve-3d; position: absolute; z-index: 0; height: auto; width: 100%; transform: rotateY(-180deg); top: 0px; transition: all 0.5s ease-out 0s;"><span class="box">AZIDA                CLEMENT</span><br><span class="box">OPOKU                         DANIEL</span><br><span class="box">NSOH   MICHAEL</span><br><span class="box">BONAVENTURE         OKRAH</span><br><span class="box">WASSAW                     PATRICK      WOKA           ERIC                 KUGRE</span><br><span class="box">DAPAA                  GRIPHIS</span><br><span class="box">AWINDAGO MOSES</span><br><span class="box">KIDIDO        FRANCIS</span><br><span class="box">ABUBAKAR               MOHAMMED</span><br><span class="box">MAMUDU                 FATIMA</span><br><span class="box">ADOMAKO           MARY</span><br><span class="box">ASAMOAH-DUFIE LINDA</span><br><span class="box">ADJEI             ELVIS</span><br><span class="box">KONADU                FAUSTINA</span><br><span class="box">PAKIEYUN ESTHER</span><br><span class="label">2</span><span class="label">2</span></div></div><div id="group2" class="grid-item card" style="perspective: 862.2px; position: relative; height: 14em;"><div class="front" style="backface-visibility: hidden; transform-style: preserve-3d; position: absolute; z-index: 1; height: auto; width: 100%; top: 0px; transition: all 0.5s ease-out 0s; transform: rotateY(0deg);"><span class="box">APPIAH                GRACE</span><br><span class="box">WAJAH        SIMON</span><br><span class="box">AMOABENG    RICHMOND</span><br><span class="box">ABUDU                         RAUF</span><br><span class="box">GODFRED           TAKYI</span><br><span class="box">SEGBEDZI           VIVAN</span><br><span class="box">NSIAH                        BISMARK</span><br><span class="box">AWINTIMA  JOSHUA</span><br><span class="box">ASAMOAH-DUFIE LINDA</span><br><span class="box">ESTHER              KODUA</span><br><span class="box">ZINALE    AGNES</span><br><span class="box">AMEMO            FAUSTINA</span><br><span class="box">ISHMAEL      K.  BOAKYE</span><br><span class="box">APPIAH           GRACE</span><br><span class="box">LIENKPIERE              PAUL EMMANUEL                  TEYE</span><br><span class="label">3</span></div><div class="back" style="backface-visibility: hidden; transform-style: preserve-3d; position: absolute; z-index: 0; height: auto; width: 100%; transform: rotateY(-180deg); top: 0px; transition: all 0.5s ease-out 0s;"><span class="box">APPIAH                GRACE</span><br><span class="box">AMEMO            FAUSTINA</span><br><span class="box">DANKWA              KWAME   VICTOR</span><br><span class="box">OWUSU                    EDMOUD</span><br><span class="box">ANING                CLEMENT</span><br><span class="box">FAUSTINA                 BOAKYE</span><br><span class="box">YEBOAH                     ERNEST</span><br><span class="box">ANTWI                 LOUIS</span><br><span class="box">EMMANUEL               GYAMFI</span><br><span class="box">ISSAHAKU               ZAKIYA</span><br><span class="box">BOATENG              MICHEAL</span><br><span class="box">SARPONG      EMMANUELLA</span><br><span class="box">BLESSING                 LARBI</span><br><span class="box">KUMI                  MANANCY</span><br><span class="box">AYAABAH                     AMOS</span><br><span class="label">3</span><span class="label">3</span></div></div><div id="group3" class="grid-item card" style="perspective: 862.2px; position: relative; height: 14em;"><div class="front" style="backface-visibility: hidden; transform-style: preserve-3d; position: absolute; z-index: 1; height: auto; width: 100%; top: 0px; transition: all 0.5s ease-out 0s; transform: rotateY(0deg);"><span class="box">WAJAH    WUMBORANAM   SIMON</span><br><span class="box">AZIDA                CLEMENT</span><br><span class="box">ANTWI   KUNADU SNR</span><br><span class="box">TEYE                   EMMANUEL  KOFI                            HADJOR      OSMAN                     AWUSU</span><br><span class="box">AWUNI                     NDREWS</span><br><span class="box">ASIBI              DORA</span><br><span class="box">ANING                CLEMENT</span><br><span class="box">SEWORNU            AMOS</span><br><span class="box">JABEDA     DARE</span><br><span class="box">AYAABAH                     AMOS</span><br><span class="box">MAMUD                    IDDRUSU</span><br><span class="box">APRAKU                 CECILIA</span><br><span class="box">SUMEYA   SHAIBU</span><br><span class="box">NSOH   MICHAEL</span><br><span class="box">ROBERTSON           DONYINA</span><br><span class="label">4</span></div><div class="back" style="backface-visibility: hidden; transform-style: preserve-3d; position: absolute; z-index: 0; height: auto; width: 100%; transform: rotateY(-180deg); top: 0px; transition: all 0.5s ease-out 0s;"><span class="box">BAANIE                AGNES</span><br><span class="box">APRAKU                 CECILIA</span><br><span class="box">AGYEMANG         CHRISTIAN</span><br><span class="box">NYARBA                      DAVID</span><br><span class="box">KWADWO                PAKIENU</span><br><span class="box">BERGELE     KOFI</span><br><span class="box">APPIAH           GRACE</span><br><span class="box">NSIAH                        BISMARK</span><br><span class="box">PROSPER         KWAKU  SEKYERE</span><br><span class="box">ZINALE    AGNES</span><br><span class="box">AWINBON          JONATHAN</span><br><span class="box">INUSAH             NAMDIY</span><br><span class="box">DANKWA           VICTOR</span><br><span class="box">WAJAH        SIMON</span><br><span class="box">ANKAMAH     EMMANUEL</span><br><span class="label">4</span><span class="label">4</span></div></div><div id="group4" class="grid-item card" style="perspective: 862.2px; position: relative; height: 14em;"><div class="front" style="backface-visibility: hidden; transform-style: preserve-3d; position: absolute; z-index: 1; height: auto; width: 100%; top: 0px; transition: all 0.5s ease-out 0s; transform: rotateY(0deg);"><span class="box">AFRIFA           KWAME</span><br><span class="box">ADJEI             ELVIS</span><br><span class="box">NKRUMAH         JUSTICE</span><br><span class="box">ANTWI             K.   JEREMIAH</span><br><span class="box">ADOMAKO           MARY</span><br><span class="box">AMOAKO               STEPHEN</span><br><span class="box">KIDIDO        FRANCIS</span><br><span class="box">AWINDAGO MOSES</span><br><span class="box">BONAVENTURE         OKRAH</span><br><span class="box">ISSAH                     SHERIF</span><br><span class="box">MAHAMA                  HAWA</span><br><span class="box">GRACE              YEBOAH</span><br><span class="box">NSOR               DANIEL</span><br><span class="box">ABDULIA           AMINA</span><br><span class="box">ASSAW                  EBENEZER</span><br><span class="label">5</span></div><div class="back" style="backface-visibility: hidden; transform-style: preserve-3d; position: absolute; z-index: 0; height: auto; width: 100%; transform: rotateY(-180deg); top: 0px; transition: all 0.5s ease-out 0s;"><span class="box">SEGBEDZI           VIVAN</span><br><span class="box">KELVIN                       BROWN</span><br><span class="box">AGYEIWAA
+  BENEDICTAALICE  DUFIECHARLES  FRIMPONG NSOH   MICHAELAWINTIMA  
+JOSHUAPAKIEYUN ESTHERBOAKYE   DAVIDASAMOAH-DUFIE LINDAAMOFA   
+MENSAHAFRANE  EL IZABETH</span><br><span class="box">OBIRIBIA           ROSELYN</span><br><span class="box">ISSAKA                     SAKINATU</span><br><span class="box">APPIAH                     BENJAMIN</span><br><span class="box">AWURAA                     AMABADU NTI                  MICHAEL    ADUSEI</span><br><span class="box">NKANSAH           RICHMOND</span><br><span class="box">AMOABENG    RICHMOND</span><br><span class="box">AWINTOR           PHILP</span><br><span class="box">MAMUD                    IDDRUSU</span><br><span class="box">GRACE              YEBOAH</span><br><span class="box">SEWORNU            AMOS</span><br><span class="box">MARTHINA      ACHIAA</span><br><span class="box">KWARTENG         BERNARD</span><br><span class="label">5</span><span class="label">5</span></div></div><div id="group5" class="grid-item card" style="perspective: 862.2px; position: relative; height: 14em;"><div class="front" style="backface-visibility: hidden; transform-style: preserve-3d; position: absolute; z-index: 1; height: auto; width: 100%; top: 0px; transition: all 0.5s ease-out 0s; transform: rotateY(0deg);"><span class="box">AMANKWA        ENESTINA</span><br><span class="box">ADOMAKO      STEPHEN</span><br><span class="box">YENUBE        JACOB</span><br><span class="box">SARPONG      EMMANUELLA</span><br><span class="box">KONADU                FAUSTINA</span><br><span class="box">MARTHINA      ACHIAA</span><br><span class="box">AWUMBORCHE       MABEL</span><br><span class="box">ASIBI ABANGA  DORA</span><br><span class="box">NYARBA                      DAVID</span><br><span class="box">OBIRIBIA           ROSELYN</span><br><span class="box">KUMI                          MANANCY</span><br><span class="box">GYASI                   CINDYLOVE</span><br><span class="box">KELVIN                       BROWN</span><br><span class="box">MAMUDU                 FATIMA</span><br><span class="box">EMMANUEL               GYAMFI</span><br><span class="label">6</span></div><div class="back" style="backface-visibility: hidden; transform-style: preserve-3d; position: absolute; z-index: 0; height: auto; width: 100%; transform: rotateY(-180deg); top: 0px; transition: all 0.5s ease-out 0s;"><span class="box">ADJEI                PETER</span><br><span class="box">ELIZABETH  OSAA MENSAH       LUCY                           GYAN</span><br><span class="box">CHARITY                  OKRAH</span><br><span class="box">OWUSU ABAYIE  BLESSING</span><br><span class="box">AWUMBORCHE       MABEL</span><br><span class="box">ABDUL   ELIAS</span><br><span class="box">ASIBI ABANGA  DORA</span><br><span class="box">TEYE                   EMMANUEL  KOFI                            HADJOR      OSMAN                     AWUSU</span><br><span class="box">MAHAMA             HAWA</span><br><span class="box">ANTWI   KUNADU SNR</span><br><span class="box">ASIBI              DORA</span><br><span class="box">ADU        STEPHENOWUSU</span><br><span class="box">JABEDA     DARE</span><br><span class="box">AMANKWA        ENESTINA</span><br><span class="box">MAHAMA                  HAWA</span><br><span class="label">6</span><span class="label">6</span></div></div><div id="group6" class="grid-item card" style="perspective: 862.2px; position: relative; height: 14em;"><div class="front" style="backface-visibility: hidden; transform-style: preserve-3d; position: absolute; z-index: 1; height: auto; width: 100%; top: 0px; transition: all 0.5s ease-out 0s; transform: rotateY(0deg);"><span class="box">ABUBAKAR               MOHAMMED</span><br><span class="box">BAAFI   EMMANUALLA</span><br><span class="box">DAVID                   DOGBEGAH</span><br><span class="box">OPOKU                ENOCK</span><br><span class="box">YAKAH AKUA       GLADYS</span><br><span class="box">ADJEI                PETER</span><br><span class="box">ERIC                           ADDAE</span><br><span class="box">AWINTOR           PHILP</span><br><span class="box">ABIO          DUFIE     ALICE</span><br><span class="box">ANANE                    CHRISTIAN</span><br><span class="box">GODFRED           NKETIA</span><br><span class="box">KELVIN                         ANTWI</span><br><span class="box">KWADWO                PAKIENU</span><br><span class="box">YEBOAH       SOLOMON</span><br><span class="box">ANKAMAH     EMMANUEL</span><br><span class="label">7</span></div><div class="back" style="backface-visibility: hidden; transform-style: preserve-3d; position: absolute; z-index: 0; height: auto; width: 100%; transform: rotateY(-180deg); top: 0px; transition: all 0.5s ease-out 0s;"><span class="box">OWUSU                     ENOCK</span><br><span class="box">HAMZA                       SEIDU</span><br><span class="box">DWUMAH            MICHAEL</span><br><span class="box">ALICE  DUFIE</span><br><span class="box">KUMI                          MANANCY</span><br><span class="box">DONKOR             AGNES</span><br><span class="box">GYASI                   CINDYLOVE</span><br><span class="box">JAMES           OPOKU</span><br><span class="box">KWAKYE                KISSINGER</span><br><span class="box">AWUNI                     NDREWS</span><br><span class="box">KYEI   BAFFOUR PRINCE DENIES BOADI</span><br><span class="box">NII                             AARON</span><br><span class="box">DAVID                   DOGBEGAH</span><br><span class="box">ENOCK                       GBAKU</span><br><span class="box">AGYEIWAA  BENEDICTA</span><br><span class="label">7</span><span class="label">7</span></div></div><div id="group7" class="grid-item card" style="perspective: 862.2px; position: relative; height: 14em;"><div class="front" style="backface-visibility: hidden; transform-style: preserve-3d; position: absolute; z-index: 1; height: auto; width: 100%; top: 0px; transition: all 0.5s ease-out 0s; transform: rotateY(0deg);"><span class="box">AGYEIWAA              DORIS</span><br><span class="box">KWAKYE                KISSINGER</span><br><span class="box">BOAKYE   DAVID</span><br><span class="box">YEBOAH                     ERNEST</span><br><span class="box">ADU        STEPHENOWUSU</span><br><span class="box">PATIENCE                    DUUT</span><br><span class="box">BAANIE                AGNES</span><br><span class="box">HAMZA                       SEIDU</span><br><span class="box">CHARLES  FRIMPONG</span><br><span class="box">OPOKU                 FAROUK</span><br><span class="box">OWUSU ABAYIE  BLESSING</span><br><span class="box">ADU                            EMELIA</span><br><span class="box">DWUMAH            MICHAEL</span><br><span class="box">BOATENG              MICHEAL</span><br><span class="box">MARIAMA           TAYAN</span><br><span class="label">8</span></div><div class="back" style="backface-visibility: hidden; transform-style: preserve-3d; position: absolute; z-index: 0; height: auto; width: 100%; transform: rotateY(-180deg); top: 0px; transition: all 0.5s ease-out 0s;"><span class="box">MICHAEL               GYEMANG</span><br><span class="box">KUULUYER                 DANIEL</span><br><span class="box">OPOKU                ENOCK</span><br><span class="box">ABANGA               ANYABILA</span><br><span class="box">KONTOR          VINCENT</span><br><span class="box">LIENKPIERE              PAUL EMMANUEL                  TEYE</span><br><span class="box">MARIAMA           TAYAN</span><br><span class="box">GODFRED           NKETIA</span><br><span class="box">KELVIN                         ANTWI</span><br><span class="box">PRINCE                  DARKO</span><br><span class="box">CHARLES  FRIMPONG</span><br><span class="box">ANANE                    CHRISTIAN</span><br><span class="box">IDDRISU      MAJEED</span><br><span class="box">BASHIDATU                HALIDU</span><br><span class="box">AGYEIWAA              DORIS</span><br><span class="label">8</span><span class="label">8</span></div></div><div id="group8" class="grid-item card" style="perspective: 862.2px; position: relative; height: 14em;"><div class="front" style="backface-visibility: hidden; transform-style: preserve-3d; position: absolute; z-index: 1; height: auto; width: 100%; top: 0px; transition: all 0.5s ease-out 0s; transform: rotateY(0deg);"><span class="box">BOAKYE         RANDOLF</span><br><span class="box">MAHAMA             HAWA</span><br><span class="box">ABANGA               ANYABILA</span><br><span class="box">PRINCE                  DARKO</span><br><span class="box">ANTWI                 LOUIS</span><br><span class="box">AMOFA   MENSAH</span><br><span class="box">OWUSU                     ENOCK</span><br><span class="box">ELIZABETH  OSAA MENSAH       LUCY                           GYAN</span><br><span class="box">OWUSU           JOSEPH</span><br><span class="box">AFRANE ELIZABETH</span><br><span class="box">WASSAW                     PATRICK      WOKA           ERIC                 KUGRE</span><br><span class="box">DAPAA                  GRIPHIS</span><br><span class="box">ABDALLAH                IDDRISU</span><br><span class="box">AWINBON          JONATHAN</span><br><span class="box">AGYEIWAA  BENEDICTA</span><br><span class="label">9</span></div><div class="back" style="backface-visibility: hidden; transform-style: preserve-3d; position: absolute; z-index: 0; height: auto; width: 100%; transform: rotateY(-180deg); top: 0px; transition: all 0.5s ease-out 0s;"><span class="box">ISSAH   MOHAMMED</span><br><span class="box">ANTWI             K.   JEREMIAH</span><br><span class="box">NKRUMAH         JUSTICE</span><br><span class="box">ERIC                           ADDAE</span><br><span class="box">OWUSU           JOSEPH</span><br><span class="box">AYAABA        VICTORIA</span><br><span class="box">PATIENCE                    DUUT</span><br><span class="box">ABDALLAH                IDDRISU</span><br><span class="box">AKWASI                        EMMA</span><br><span class="box">ANSOROMA            PROSPER</span><br><span class="box">ABDULIA           AMINA</span><br><span class="box">ROBERTSON           DONYINA</span><br><span class="box">AMOAKO               STEPHEN</span><br><span class="box">BAAFI   EMMANUALLA</span><br><span class="box">BOAKYE         RANDOLF</span><br><span class="label">9</span><span class="label">9</span></div></div><div id="group9" class="grid-item card" style="perspective: 862.2px; position: relative; height: 14em;"><div class="front" style="backface-visibility: hidden; transform-style: preserve-3d; position: absolute; z-index: 1; height: auto; width: 100%; top: 0px; transition: all 0.5s ease-out 0s; transform: rotateY(0deg);"><span class="box">ISSAHAKU               ZAKIYA</span><br><span class="box">ISSAH   MOHAMMED</span><br><span class="box">KONTOR          VINCENT</span><br><span class="box">KWARTENG         BERNARD</span><br><span class="box">ABDUL   ELIAS</span><br><span class="box">APPIAH                     BENJAMIN</span><br><span class="box">NKANSAH           RICHMOND</span><br><span class="box">IDDRISU      MAJEED</span><br><span class="box">KYEI   BAFFOUR PRINCE DENIES BOADI</span><br><span class="box">FUSEINI                      ADAMS</span><br><span class="box">AGYEMANG         CHRISTIAN</span><br><span class="box">ENOCK                       GBAKU</span><br><span class="box">ANSOROMA            PROSPER</span><br><span class="box">DAPAAH                   HARUNA</span><br><span class="box">&nbsp;</span><br><span class="label">10</span></div><div class="back" style="backface-visibility: hidden; transform-style: preserve-3d; position: absolute; z-index: 0; height: auto; width: 100%; transform: rotateY(-180deg); top: 0px; transition: all 0.5s ease-out 0s;"><span class="box">ASSAW                  EBENEZER</span><br><span class="box">YAKUBU            FUSEINI</span><br><span class="box">BOAKYE   DAVID</span><br><span class="box">OPPONG                   CECILIA</span><br><span class="box">AMOFA   MENSAH</span><br><span class="box">AFRIFA           KWAME</span><br><span class="box">ADU                            EMELIA</span><br><span class="box">YEBOAH       SOLOMON</span><br><span class="box">NSOR               DANIEL</span><br><span class="box">ESTHER              KODUA</span><br><span class="box">YAKAH AKUA       GLADYS</span><br><span class="box">FUSEINI                      ADAMS</span><br><span class="box">OPOKU                 FAROUK</span><br><span class="box">ADOMAKO      STEPHEN</span><br><span class="box">&nbsp;</span><br><span class="label">10</span><span class="label">10</span></div></div></div>
+	
+		
+		<div class="asd" style="text-align:center;position:relative;z-index:-1;margin-top:2em">
+						<!-- Ezoic -  Random Group Generator - mid_content -->
+		<div id="ezoic-pub-ad-placeholder-114"><div><span class="ezoic-ad" style="background:0 0 !important;display:flex !important;float:none !important;justify-content:space-between;line-height:0px;margin-bottom:0px !important !important;margin-left:auto !important;margin-right:auto !important;margin-top:0px !important !important;max-width:100% !important;min-height:250px !important;min-width:970px;padding:0;text-align:center !important;width:970px;" data-ez-name="classtools_net-large-mobile-banner-1"><span style="background:0 0 !important;display:flex !important;float:none !important;justify-content:space-between;line-height:0px;margin-bottom:0px !important !important;margin-left:auto !important;margin-right:auto !important;margin-top:0px !important !important;max-width:100% !important;min-height:250px !important;min-width:970px;padding:0;text-align:center !important;width:970px;" class="ezoic-ad large-mobile-banner-1 large-mobile-banner-1114 adtester-container adtester-container-114 ezoic-ad-adaptive" data-ez-name="classtools_net-large-mobile-banner-1"><span class="ezoic-ad ezads-sticky-intradiv" style="display:inherit;position:sticky;top:0px;"><span class="ezoic-ad large-mobile-banner-1 large-mobile-banner-1-multi-114 adtester-container adtester-container-114 ezads-sticky-intradiv" data-ez-name="classtools_net-large-mobile-banner-1"><span id="div-gpt-ad-classtools_net-large-mobile-banner-1-0" ezaw="323" ezah="250" style="z-index: 0; padding: 0px; position: sticky !important; top: 0px !important; min-height: 250px; min-width: 323px;" class="ezoic-ad ezads-sticky-intradiv" data-google-query-id="CKXKp8XSi4YDFUNPpAQdUXQGFQ"><div id="google_ads_iframe_/1254144,22468437949/classtools_net-large-mobile-banner-1_0__container__" style="border: 0pt; display: inline-block; width: 300px; height: 250px;"><iframe frameborder="0" style="border: 0px; vertical-align: bottom;" src="Random%20Group%20Generator_files/container_003.html" id="google_ads_iframe_/1254144,22468437949/classtools_net-large-mobile-banner-1_0" title="3rd party ad content" name="" scrolling="no" marginwidth="0" marginheight="0" width="300" height="250" data-is-safeframe="true" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" aria-label="Advertisement" tabindex="0" data-google-container-id="2" data-load-complete="true"></iframe></div></span></span><span class="ezoic-ad large-mobile-banner-1 large-mobile-banner-1-multi-114 adtester-container adtester-container-114 ezads-sticky-intradiv" data-ez-name="classtools_net-large-mobile-banner-1"><span id="div-gpt-ad-classtools_net-large-mobile-banner-1-0_1" ezaw="323" ezah="250" style="z-index: 0; padding: 0px; position: sticky !important; top: 0px !important; min-height: 250px; min-width: 323px;" class="ezoic-ad ezads-sticky-intradiv" data-google-query-id=""><div id="google_ads_iframe_/1254144,22468437949/classtools_net-large-mobile-banner-1_1__container__" style="border: 0pt;"><iframe id="google_ads_iframe_/1254144,22468437949/classtools_net-large-mobile-banner-1_1" name="google_ads_iframe_/1254144,22468437949/classtools_net-large-mobile-banner-1_1" title="3rd party ad content" width="300" height="250" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" style="border: 0px; vertical-align: bottom;" aria-label="Advertisement" tabindex="0" data-google-container-id="3" data-load-complete="true"></iframe></div></span></span><span class="ezoic-ad large-mobile-banner-1 large-mobile-banner-1-multi-114 adtester-container adtester-container-114 ezads-sticky-intradiv" data-ez-name="classtools_net-large-mobile-banner-1"><span id="div-gpt-ad-classtools_net-large-mobile-banner-1-0_2" ezaw="323" ezah="250" style="z-index: 0; padding: 0px; position: sticky !important; top: 0px !important; min-height: 250px; min-width: 323px;" class="ezoic-ad ezads-sticky-intradiv" data-google-query-id=""><div id="google_ads_iframe_/1254144,22468437949/classtools_net-large-mobile-banner-1_2__container__" style="border: 0pt;"><iframe id="google_ads_iframe_/1254144,22468437949/classtools_net-large-mobile-banner-1_2" name="google_ads_iframe_/1254144,22468437949/classtools_net-large-mobile-banner-1_2" title="3rd party ad content" width="300" height="250" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" style="border: 0px; vertical-align: bottom;" aria-label="Advertisement" tabindex="0" data-google-container-id="4" data-load-complete="true"></iframe></div></span></span></span><style> .large-mobile-banner-1-multi-114{border:none !important;display:block !important;float:none !important;line-height:0px;margin-bottom:0px !important;margin-left:auto !important;margin-right:auto !important;margin-top:0px !important;max-width:100% !important;min-height:250px;min-width:300px;padding:0;text-align:center !important;}</style></span><span data-nosnippet="" style="display:block;height:14px;margin:2px auto;position:relative" class="reportline" data-ez-ph-owner-id=""><span style="text-align:center;font-size:12px !important;font-family: arial!important;float:right;line-height:normal;" class="ezoicwhat"><img src="Random%20Group%20Generator_files/ezoicbwa.png" alt="Ezoic" loading="lazy" style="height:14px !important; padding:2px !important; border:0px !important; cursor:pointer !important; width: 14px !important; margin:0 !important; box-sizing: content-box !important;" title="ezoic" name="?pageview_id=5440e7dd-6f9a-4364-6818-4ef0d5c616f6&amp;ad_position_id=114&amp;impression_group_id=classtools_net-large-mobile-banner-1/2024-05-13/1242296165339798&amp;ad_size=970x250&amp;domain_id=377356&amp;url=https://www.classtools.net/random-group-generator/"></span></span></span></div></div>
+		<!-- End Ezoic -  Random Group Generator - mid_content -->
+			
+		</div>
+		
+		
+	</div>
+</div>
+
+<audio id="swoosh">
+  <source src="Random%20Group%20Generator_files/cards.ogg" type="audio/ogg">
+  <source src="Random%20Group%20Generator_files/cards.mp3" type="audio/mpeg">
+</audio>
+<audio id="tada">
+  <source src="Random%20Group%20Generator_files/success.ogg" type="audio/ogg">
+  <source src="Random%20Group%20Generator_files/success.mp3" type="audio/mpeg">
+</audio>
+<script type="text/javascript">
+audioplaying=new Array()
+muted=false
+function playSound(id) {
+	if(muted==true)return{}
+	audio = document.getElementById(id);
+	audio.currentTime = 0;
+	audio.play();
+	audioplaying[id]=true
+}
+function stopSound(id) {
+	audio = document.getElementById(id);
+	audio.pause();
+    audio.currentTime = 0;
+	audioplaying[id]=false
+}
+</script>	
+
+
+
+	
+
+	
+<form name="reloader" id="reloader" method="POST">
+<input type="hidden" name="pw" id="pw" value="">
+</form>
+	
+	
+
+	
+	
+
+
+<div id="savedBoxWrapper">
+    <div id="savedBox" style="display:none;border:2px #FFCC66 solid; -webkit-border-radius: 10px;-moz-border-radius: 10px;border-radius: 10px;position:absolute;text-align:center;z-index:5000000;background:darkblue;color:white;padding:20px;">
+    <span id="savedBoxNAME"></span>
+    <br>
+    <span id="ads3" class="asd">
+		
+	
+<script async="" src="Random%20Group%20Generator_files/f_003.txt"></script>
+<!-- Random Name Wheel - link generated -->
+<ins class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-8912794096382956" data-ad-slot="4611369448" data-adsbygoogle-status="done" data-ad-status="filled"><div id="aswift_0_host" style="border: medium; height: 250px; width: 300px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-block;"><iframe id="aswift_0" name="aswift_0" style="left:0;position:absolute;top:0;border:0;width:300px;height:250px;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="300" height="250" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" src="Random%20Group%20Generator_files/ads.html" data-google-container-id="a!1" tabindex="0" title="Advertisement" aria-label="Advertisement" data-google-query-id="CNDg_6_Ni4YDFW6cJwId00MOHA" data-load-complete="true"></iframe></div></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+     <br>
+     </span>
+    <span id="savedBoxOK"></span>
+    
+    </div>
+
+	<a href="https://www.classtools.net/index.php" target="_blank"><img id="theLog" src="Random%20Group%20Generator_files/_logo.png"></a>
+</div>
+	
+	<div style="position:relative;width:100%;text-align:center;margin:auto;background:black;">
+		<h1 align="center">Video Tutorial</h1><!-- 134 views after 10 months in Feb 2023 -->
+	<iframe width="560" height="315" src="Random%20Group%20Generator_files/jvnMARuFnhg.html" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe>
+		
+	</div>
+	
+	<script src="Random%20Group%20Generator_files/select2.js"></script>
+<link href="Random%20Group%20Generator_files/select2.css" rel="stylesheet">
+		
+<style>	
+.footerCtr {
+	clear:both;
+    margin-right: auto;
+    margin-left: auto;
+}
+	
+.footer-section, .select2-results{text-shadow: 0 0 black}
+	
+.row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+	
+.footer-logo img {
+    max-width: 200px;
+}
+	
+.pt-5, .pb-5 {
+    padding-top: 1.5rem!important;
+}
+
+.col-lg-6{
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+	}
+	
+@media (min-width: 576px){
+.footerCtr {
+    max-width: 540px;
+	}}
+	
+@media (min-width: 768px)
+{
+.footerCtr {
+    max-width: 720px;
+}
+}
+
+@media (min-width: 992px)
+{
+	.footerCtr {
+		max-width: 960px;
+	}
+	.text-lg-left {
+		text-align: left!important;
+	}
+
+	.footer-content {
+		position: relative;
+		z-index: 2;
+	}
+
+	.col-lg-6 {
+		-ms-flex: 0 0 45%;
+		flex: 0 0 45%;
+		max-width: 50%;
+	}
+	.col-lg-4 {
+		-ms-flex: 0 0 33.333333%;
+		flex: 0 0 33.333333%;
+		max-width:33.333333%;
+	}
+	.d-lg-block {
+    display: block!important;
+	}
+}
+	
+@media (min-width: 1200px)
+{
+.footerCtr {
+    max-width: 1140px;
+}
+	}
+.footer-text p {
+    margin-bottom: 14px;
+    font-size: 14px;
+    color: #7e7e7e;
+    line-height: 28px;
+}
+	
+.text-right {
+    text-align: right!important;
+}
+	
+
+.footer-section a
+{
+    color: #007bff;
+    text-decoration: none;
+    background-color: transparent;
+}
+	
+	
+.footer-menu li a {
+    font-size: 14px;
+    color: #878787;
+}
+	
+.footer-section {
+background: #151414;
+position: relative;
+	clear:both;
+bottom:0px;
+width:100vw;
+
+margin: 0;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 2;
+    color: #212529;
+    text-align: left;
+
+	
+}
+	
+.footer-widget-heading h3 {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 40px;
+    position: relative;
+	font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+}
+	
+.footer-widget ul li a {
+    color: #878787;
+    text-transform: capitalize;
+}
+	
+a {
+    color: #007bff;
+    text-decoration: none;
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects;
+}
+	
+.footer-widget-heading h3::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -15px;
+  height: 2px;
+  width: 50px;
+  background: #ff5e14;
+}
+	
+
+.copyright-area {
+    background: #202020;
+    padding: 25px 0;
+}
+	
+	.copyright-text p {
+    margin: 0;
+    font-size: 14px;
+	color: #878787;
+	}
+	
+.footer-section ul {
+    margin: 0px;
+    padding: 0px;
+	list-style-type: none
+}
+.footer-menu li {
+    display: inline-block;
+    margin-left: 20px;
+	list-style-type: none;
+}
+	
+
+	.copyright-text p a {
+    color: #ff5e14;
+}
+	
+footer li{background:none!important;width:auto}
+	
+	
+footer{z-index:999}
+	
+	body{min-height:101vh}	
+	
+	
+	
+	
+
+</style>	
+			
+<script>
+
+function chooseTemp()
+{
+var e = document.getElementById("selectFooter");
+var strUser = e.options[e.selectedIndex].value;
+self.location=strUser
+}
+	
+$( document ).ready(function() {
+	$("#selectFooter").select2();
+	temp=self.location+""
+
+	if(temp.indexOf("/pac/")!=-1 ){$(".footer-section").hide()}
+})
+	
+
+$("footer").ready(function() {
+	doch=$(document).height()
+	scrh=$(window).height();
+	footery=$(".footer-section").offset()
+	//alert(doch+"/"+scrh+"/"+footery.top);
+	//if(doch>scrh){scrh=doch;}//get the lowest possible position
+	temp=self.location+""
+
+	if(temp.indexOf("/pac/")!=-1 || temp.indexOf("arcade")!=-1 || temp.indexOf("/fishbone/")!=-1 || temp.indexOf("/newsfeed/")!=-1 || temp.indexOf("/target/")!=-1 || temp.indexOf("/QR/questions")!=-1 )
+		{
+		if(footery.top<scrh){$("footer").css("top",scrh+"px")}//if absolute positionining of stuff is screwing things up, stick it at bottom of page.
+		}
+
+	if(temp.indexOf("/hexagon/")!=-1 || temp.indexOf("/vortex/")!=-1 || temp.indexOf("/diamond9/")!=-1 || temp=="https://www.classtools.net/index.php" || temp.indexOf("/FB/")!=-1 || temp.indexOf("/crossword/")!=-1 || temp.indexOf("/hotspot/")!=-1)
+			{  
+			$("footer").css("position","fixed");
+			$("footer").css("top","");
+			$("footer").css("bottom","0px");
+			$("footer").hide();
+			$(window).scroll(function() {
+					if($(window).scrollTop() + $(window).height() >= $(document).height()) {
+					$("footer").slideDown()
+					   }
+					else{$("footer").slideUp()}
+					});
+			};
+	
+})
+
+</script>
+
+	<footer class="footer-section">
+        <div class="footerCtr">
+            <div class="footer-content pt-5 pb-5">
+                <div class="row">
+                    <div class="col-xl-4 col-lg-4 mb-50">
+                        <div class="footer-widget">
+							
+							<div class="footer-widget-heading">
+							<h3>Have you tried...?</h3>
+                            </div>
+                            
+                            <!--<div class="footer-logo">
+                                <a href="index.html"><img src="/_logo.png" class="img-fluid" alt="logo"></a>
+                            </div>-->
+							
+                            <div class="footer-social-icon">
+                              <!--  <span>ClassTools Premium</span>
+                                <a href="#"><i class="fab fa-facebook-f facebook-bg"></i></a>
+                                <a href="#"><i class="fab fa-twitter twitter-bg"></i></a>
+                                <a href="#"><i class="fab fa-google-plus-g google-bg"></i></a>-->
+								<div align="left"><a id="xferturl" href="https://www.classtools.net/breakingnews" target="_blank"><img id="xfert" style="max-width:80%" src="Random%20Group%20Generator_files/breakingnews.jpg"></a></div>
+								
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+                        <div class="footer-widget">
+                            <div class="footer-widget-heading">
+                                <h3>Top Templates</h3>
+                            </div>
+                            <ul>
+                                <li><a target="_blank" href="https://www.classtools.net/random-name-picker/">Random Name Picker</a></li>
+								<li><a target="_blank" href="https://www.classtools.net/random-group-generator/">Random Group Generator</a></li>
+								<li><a target="_blank" href="https://www.classtools.net/FB/home-page">Fakebook</a></li>
+								<li><a target="_blank" href="https://www.classtools.net/arcade">Arcade Game Generator</a></li>
+								<li><a target="_blank" href="https://www.classtools.net/flingtheteacher/">Fling the Teacher</a></li>
+								<li><a target="_blank" href="https://www.classtools.net/vortex/">The Vortex</a></li>
+								<li><a target="_blank" href="https://www.classtools.net/QR">QR Treasure Hunt</a></li>
+                               
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+                        <div class="footer-widget">
+                            <div class="footer-widget-heading">
+                                <h3>All Templates</h3>
+                            </div>
+                            <!--<div class="footer-text mb-25">
+                                <p>Search here</p>
+                            </div>-->
+							
+                            <form id="tempSel" name="tempSel">
+                    <div align="left">
+                      <div class="select2-container" id="s2id_selectFooter"><a href="javascript:void(0)" class="select2-choice" tabindex="-1">   <span class="select2-chosen" id="select2-chosen-1">Select or search for a template:</span><abbr class="select2-search-choice-close"></abbr>   <span class="select2-arrow" role="presentation"><b role="presentation"></b></span></a><label for="s2id_autogen1" class="select2-offscreen"></label><input class="select2-focusser select2-offscreen" type="text" aria-haspopup="true" role="button" aria-labelledby="select2-chosen-1" id="s2id_autogen1"><div class="select2-drop select2-display-none select2-with-searchbox">   <div class="select2-search">       <label for="s2id_autogen1_search" class="select2-offscreen"></label>       <input type="text" autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false" class="select2-input" role="combobox" aria-expanded="true" aria-autocomplete="list" aria-owns="select2-results-1" id="s2id_autogen1_search" placeholder="">   </div>   <ul class="select2-results" role="listbox" id="select2-results-1">   </ul></div></div><select name="selectFooter" id="selectFooter" onchange="javascript:chooseTemp()" tabindex="-1" title="" class="select2-offscreen">
+                        <option selected="selected" value="">Select or search for a template:</option>
+						   <option value="http://www.classtools.net/random-name-picker/">Random Name Picker</option>
+                        <option value="http://www.classtools.net/FB/home-page">Fakebook</option>
+                        <option value="https://www.classtools.net/flingteacher/home-page">Fling the Teacher!</option>
+						  <option value="http://www.classtools.net/vortex">Vortex (sorting game)</option>
+						  <option value="http://www.classtools.net/arcade/index.php">Arcade Game Generator</option>
+                        <option value="http://www.classtools.net/bingo/">Bingo Card Generator</option>
+						  <option value="http://www.classtools.net/timer/">Countdown Timer</option>
+                        <option value="http://www.classtools.net/cloze/">Cloze ("Fill the Gaps") Quiz Generator</option>
+						  <option value="http://www.classtools.net/diamond9/">Diamond 9 Generator</option>
+						  <option value="http://www.classtools.net/reveal/">Image Reveal Tool</option>
+						  <option value="http://www.classtools.net/timeline/">Wikipedia Timeline Generator</option>
+						  <option value="http://www.classtools.net/Venn">Venn</option>
+						  <option value="http://www.classtools.net/random-group-generator">Random Group Generator</option>
+						  <option value="http://www.classtools.net/tarsia">Tarsia Puzzle Generator</option>
+                        <option value="http://www.classtools.net/dragdrop">Drag and Drop Quiz Generator</option>
+						  <option value="http://www.classtools.net/meme">Medieval Meme Generator</option>
+                        <option value="http://www.classtools.net/z-a">Z-A Quiz Generator</option>
+                        <option value="http://www.classtools.net/eyesay">Eyesay! Essay Analyser</option>
+                        <option value="http://www.classtools.net/crossword">Crossword Generator</option>
+                        <option value="http://www.classtools.net/soundboard">Audience Soundboard</option>
+						<option value="http://www.classtools.net/3D">3D Gallery</option>
+                        <option value="http://www.classtools.net/newsfeed/create.php">Newsfeed (Running Dictation) Generator</option>
+                        <option value="http://www.classtools.net/timeliner/index.php">3D Turbo Timeline Generator</option>
+                        <option value="http://www.classtools.net/certificate">Certificate Generator</option>
+						 <option value="http://www.classtools.net/lifewheel">Wheel of Life</option>
+                        <option value="http://www.classtools.net/connect">Connect Fours</option>
+                        <option value="http://www.classtools.net/pac">PacMan</option>
+						  <option value="http://www.classtools.net/codemaker">Codemaker</option>
+                      <option value="http://www.classtools.net/crossword/">Crossword Generator</option>  
+                    <option value="http://www.classtools.net/QR/">QR Treasure Hunt</option>
+                        <option value="http://www.classtools.net/brainybox">3D Cube Generator: BrainyBox</option>
+                        <option value="http://www.classtools.net/breakingnews">Breaking News</option>
+                        <option value="http://www.classtools.net/headline_generator">Headline Generator</option>
+                        <option value="http://www.classtools.net/solo-hexagons/">Hexagons Generator</option>
+                        <option value="http://www.classtools.net/calendar.php">Dates for Schools</option>
+                        <option value="http://www.classtools.net/twister/">Twister: Fake Tweets</option>
+                        <option value="http://www.classtools.net/SMS/">SMS: Fake Conversation Generator</option>
+                        <option value="http://www.classtools.net/citation-generator/">Citation/QR/ShortURL Generator</option>
+                        <option value="http://www.classtools.net/qwikslides/">QwikSlides</option>
+                        <option value="http://www.classtools.net/Venn">Venn</option>
+						  <option value="http://www.classtools.net/target">Target Diagram</option>
+						   <option value="http://www.classtools.net/fishbone">Fishbone Diagram</option>
+                        <option value="http://www.classtools.net/education-games-php/diamond9">Diamond 9</option>
+                        <option value="http://www.classtools.net/telescopic/">Telescopic Topic</option>
+                        <option value="http://www.classtools.net/tweetpics/">TweetPics</option>
+                        <option value="http://www.classtools.net/quotes/widget.php">QuoteRotator</option>
+                        <option value="http://www.classtools.net/main_area/keywordchecker/index.php">KeyWord Checker</option>
+                        <option value="http://www.activehistory.co.uk/plagiarizr/">Plagiarizr: Plagiarism Checker</option>
+                       
+                         <option value="http://www.classtools.net/newsfeed/create.php">Newsfeed (Running Dictation) Generator</option>
+                        <option value="http://www.classtools.net/_SEARCH/">PowerSearch</option>
+                        
+                        
+                  </select>
+						
+						<div class="footer-widget-heading">
+							<h3>About</h3>
+                            </div>
+                            <div class="footer-text">
+                                <p>Create free educational games and tools for the school classroom.</p>
+                            </div>
+						
+						<div class="footer-logo">
+                                <a href="https://www.classtools.net/index.php" target="_blank"><img src="Random%20Group%20Generator_files/_logo.png" class="img-fluid" alt="logo"></a>
+                            </div>
+						
+                        </div>
+                    </form></div>
+                </div>
+            </div>
+        </div>
+				
+				
+        <div class="copyright-area">
+			
+           <div class="footerCtr">
+			  
+                <div class="row">
+				
+                    <div class="col-xl-6 col-lg-6 text-center text-lg-left" style="display:inline-block">
+                        <div class="copyright-text">
+                            <p>Copyright © 2024 <a target="_blank" href="https://russeltarr.com/">Russel Tarr</a>, All Rights Reserved </p>
+                        </div>
+                    </div>
+					
+					
+                    <div class="col-xl-6 col-lg-6 d-none d-lg-block text-right" style="display:inline-block">
+                        <div class="footer-menu">
+                            <ul>
+                                <li><a target="_blank" href="https://www.classtools.net/index.php">Home</a></li>
+								<li><a target="_blank" href="javascript:showFields()"><b>Premium Login</b></a></li>
+								<li><a target="_blank" href="https://www.classtools.net/_SEARCH/index.php">PowerSearch</a></li>
+                                <!--<li><a href="#">Terms</a></li>
+                                <li><a href="#">Policy</a></li>-->
+                                <li><a target="_blank" href="https://www.classtools.net/privacy.php">Privacy</a></li>
+                                <li><a target="_blank" href="https://www.classtools.net/feeditback.php">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+				
+				
+			</div>	
+			
+
+	
+<div class="asd" style="position:sticky;top:0px;z-index:999;background:#000;text-align:center;margin:auto;">
+<!-- Ezoic - FOOTER2023 FORCED -->
+<div id="ezoic-pub-ad-placeholder-112"><div><span class="ezoic-ad" style="display:block !important;float:none !important;line-height:0px;margin-bottom:0px !important;margin-left:auto !important;margin-right:auto !important;margin-top:0px !important;max-width:100% !important;min-height:280px;min-width:336px;padding:0;text-align:center !important;" data-ez-name="classtools_net-medrectangle-1"><span id="div-gpt-ad-classtools_net-medrectangle-1-0" ezaw="336" ezah="280" style="position: relative; z-index: 0; display: block; padding: 0px; width: 100%;" class="ezoic-ad"><ins id="div-gpt-ad-classtools_net-medrectangle-1-0-asloaded" class="adsbygoogle ezasloaded ezfound" data-ad-client="ca-pub-8912794096382956" data-ad-channel="8066389757" style="display: block; min-width: 336px; width: 1296px; height: 280px; margin: 0px auto;" data-adsbygoogle-status="done" data-ad-status="filled"><script>(adsbygoogle = window.adsbygoogle || []).push({});</script><div id="aswift_1_host" style="border: medium; height: 280px; width: 1296px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-block;"><iframe id="aswift_1" name="aswift_1" style="left:0;position:absolute;top:0;border:0;width:1296px;height:280px;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="1296" height="280" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" src="Random%20Group%20Generator_files/ads.html" data-google-container-id="a!2" tabindex="0" title="Advertisement" aria-label="Advertisement" data-google-query-id="CL3Jg7DNi4YDFXtApAQdlK0BYA" data-load-complete="true"></iframe></div></ins></span><span data-nosnippet="" style="display:block;height:14px;margin:2px auto;position:relative" class="reportline" data-ez-ph-owner-id=""><span style="text-align:center;font-size:12px !important;font-family: arial!important;float:right;line-height:normal;" class="ezoicwhat"><img src="Random%20Group%20Generator_files/ezoicbwa.png" alt="Ezoic" loading="lazy" style="height:14px !important; padding:2px !important; border:0px !important; cursor:pointer !important; width: 14px !important; margin:0 !important; box-sizing: content-box !important;" title="ezoic" name="?pageview_id=5440e7dd-6f9a-4364-6818-4ef0d5c616f6&amp;ad_position_id=112&amp;impression_group_id=classtools_net-medrectangle-1/2024-05-13/416957199401799&amp;ad_size=336x280&amp;domain_id=377356&amp;url=https://www.classtools.net/random-group-generator/"></span></span></span></div></div>
+<!-- End Ezoic - FOOTER2023 -->
+	
+	
+	</div>
+
+<div style="padding-bottom:150px">&nbsp;</div>
+
+    </footer>
+		
+<script>
+
+	//if(randAd==0)
+	//{
+		window.ezstandalone = window.ezstandalone || {};
+		ezstandalone.cmd = ezstandalone.cmd || [];
+		ezstandalone.cmd.push(function() {
+			ezstandalone.define(112);
+			ezstandalone.enable();
+			ezstandalone.display();
+		});
+	//}
+
+xpics=new Array()
+n=0
+xpics[n++]=new Array("bingo","bingo");
+xpics[n++]=new Array("crossword","crossword");
+xpics[n++]=new Array("fishbone","fishbone");
+xpics[n++]=new Array("flingteacher","flingteacher/home-page");
+xpics[n++]=new Array("random-group-generator","random-group-generator");
+xpics[n++]=new Array("random-name-picker","random-name-picker");
+xpics[n++]=new Array("timer","timer");
+xpics[n++]=new Array("vortex","vortex");
+xpics[n++]=new Array("soundboard","soundboard");
+xpics[n++]=new Array("hotspot","hotspot");
+xpics[n++]=new Array("citation-generator","citation-generator");
+xpics[n++]=new Array("newsfeed","newsfeed");
+xpics[n++]=new Array("breakingnews","breakingnews");
+xpics[n++]=new Array("cloze","cloze");
+xpics[n++]=new Array("z-a","z-a");
+xpics[n++]=new Array("target","target");
+xpics[n++]=new Array("diamond9","diamond9");
+xpics[n++]=new Array("reveal","reveal");
+xpics[n++]=new Array("Venn","Venn");
+xpics[n++]=new Array("timeline","timeline");
+xpics[n++]=new Array("seating","seating-plan-generator");
+	
+	
+for(n=0;n<100;n++)
+{
+temp1=Math.floor(Math.random()*xpics.length);
+temp=xpics[temp1]
+temp2=Math.floor(Math.random()*xpics.length);
+xpics[temp1]=xpics[temp2]
+xpics[temp2]=temp
+}
+	
+$( document ).ready(function() {
+$("#xfert").attr("src","/fallbackads/"+xpics[0][0]+".jpg")
+$("#xferturl").attr("href","/"+xpics[0][1])
+});
+	
+</script>
+
+
+
+<span role="status" aria-live="polite" class="select2-hidden-accessible"></span><script async="" src="Random%20Group%20Generator_files/v.js"></script><script>(function(){if(typeof document.body==='undefined'||document.body===null){return;}
+var attachEvent=function(element,evt,func){if(element.addEventListener){element.addEventListener(evt,func,false);}else{element.attachEvent("on"+evt,func);}};attachEvent(document.body,"ezVigImpression",function(e){if(typeof(_ezaq)!=="undefined"&&typeof e==="object"){__ez.pel.AddAndFire(e.slot,[(new __ezDotData(e.key,e.value))]);}});})();</script><script>window.__ez_vig_close_wrapper=function(closeFunc,urlAddition){closeFunc();var vc={"enabled":false,"useVignetteLoader":true,"fireEventName":"ezVigImpression","impressionSource":"anchor","urlAddition":"utm_content=anc-true","disableFloor":true,"eventHandlerTest":false};if(typeof urlAddition=='string'){vc.urlAddition=urlAddition;}
+var v=newEzVignette(vc);v.handleClick();};</script><span id="ezmob-wrapper"><div class="ezmob-footer ezoic-floating-bottom ezo_ad ezmob-footer-desktop ezmobtrans" id="ezmobfooter"><center><span id="ezoic-pub-ad-placeholder-100"><div><div class="ezmob-footer ezoic-floating-bottom ezo_ad ezmob-footer-desktop" id="ezmobfooter"><center><span class="ezoic-ad" style="display:inline-block;float:none !important;line-height:0px;max-width:100% !important;min-height:90px;min-width:0px;padding:0;" data-ez-name="classtools_net-medrectangle-2"><span id="div-gpt-ad-classtools_net-medrectangle-2-0" ezaw="728" ezah="90" style="position: relative; z-index: 0; padding: 0px;" class="ezoic-ad" data-google-query-id="CP3V5KvPi4YDFbpgpAQdyiULkQ"><div id="google_ads_iframe_/1254144,22468437949/classtools_net-medrectangle-2_0__container__" style="border: 0pt; display: inline-block; width: 728px; height: 90px;"><iframe frameborder="0" style="border: 0px; vertical-align: bottom;" src="Random%20Group%20Generator_files/container_003.html" id="google_ads_iframe_/1254144,22468437949/classtools_net-medrectangle-2_0" title="3rd party ad content" name="" scrolling="no" marginwidth="0" marginheight="0" width="728" height="90" data-is-safeframe="true" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" aria-label="Advertisement" tabindex="0" data-google-container-id="1" data-load-complete="true"></iframe></div></span></span><span class="ezmob-footer-close-wrap" id="ezmob-footer-close" style=""><span class="ezmob-footer-close" onclick="__ez_close_anchor()" title="close"></span><span class="ezoicwhat"><img src="Random%20Group%20Generator_files/ezoic.png" title="ezoic" class="ezmob-anchor-img"></span></span></center></div></div></span><span class="ezmob-footer-close-wrap" id="ezmob-footer-close" style="display: none;"><span class="ezmob-footer-close" onclick="__ez_close_anchor()" title="close"></span><span class="ezoicwhat"><img src="Random%20Group%20Generator_files/ezoic.png" title="ezoic" class="ezmob-anchor-img"></span></span></center></div></span><script>__ez.queue.addFile('anchorfix.js', '//go.ezodn.com/detroitchicago/anchorfix.js?cb=195-0', false, [], true, true, true, false);</script><script src="Random%20Group%20Generator_files/ezadloadhb.js" async=""></script><script src="Random%20Group%20Generator_files/ezadloadamzn.js" async=""></script><iframe src="Random%20Group%20Generator_files/container_003.html" style="visibility: hidden; display: none;"></iframe><iframe style="display: none;" name="__launchpadLocator"></iframe><iframe style="display: none;" src="https://s.amazon-adsystem.com/iu3?cm3ppd=1&amp;d=dtb-pub&amp;csif=t&amp;dl=n-mediagrid_n-index_rx_n-MediaNet_ox-db5_n-mobfox_n-adYouLike_n-adman-v2_n-onetag_pm-db5_n-simpli.fi_ym_n-Vidazoo_n-nativo_n-Outbrain_gg_n-adMediaV1_n-Beeswax_smrt_cnv_n-inmobi_n-sharethrough_rbd_ppt_n-baidu"></iframe><img style="display: none !important; width: 1px !important; height: 1px !important;" src="Random%20Group%20Generator_files/px_002.gif"><img style="display: none !important; width: 1px !important; height: 1px !important;" src="Random%20Group%20Generator_files/favicon.ico"><img style="display: none !important; width: 1px !important; height: 1px !important;" src="Random%20Group%20Generator_files/px.gif"><script src="Random%20Group%20Generator_files/ezjitscroll.js" async=""></script><script src="Random%20Group%20Generator_files/ezicsticky.js" async=""></script><script src="Random%20Group%20Generator_files/524"></script><script src="Random%20Group%20Generator_files/ezjitpos.js" async=""></script><img height="1" width="1" style="display: none;" src="Random%20Group%20Generator_files/halo_match.gif" alt=""><img height="1" width="1" style="display: none;" src="Random%20Group%20Generator_files/match.gif" alt=""><img height="1" width="1" style="display: none;" src="Random%20Group%20Generator_files/generic.gif" alt=""><img height="1" width="1" style="display: none;" src="Random%20Group%20Generator_files/UCookieSetPug.html" alt=""><img height="1" width="1" style="display: none;" src="Random%20Group%20Generator_files/token" alt=""><img height="1" width="1" style="display: none;" src="Random%20Group%20Generator_files/tapad_match.gif" alt=""><img height="1" width="1" style="display: none;" src="Random%20Group%20Generator_files/g_match.gif" alt=""><img height="1" width="1" style="display: none;" src="Random%20Group%20Generator_files/g_match_002.gif" alt=""><img height="1" width="1" style="display: none;" src="Random%20Group%20Generator_files/0" alt=""><img height="1" width="1" style="display: none;" src="Random%20Group%20Generator_files/ppnt_match.gif" alt=""><img height="1" width="1" style="display: none;" src="Random%20Group%20Generator_files/ium" alt=""><script src="Random%20Group%20Generator_files/ezadfilled.js" async=""></script><iframe src="Random%20Group%20Generator_files/syncframe.html" width="0" height="0" frameborder="0" style="border-width: 0px; margin: 0px; display: none;" sandbox="allow-scripts allow-same-origin" title="Criteo GUM iframe"></iframe><script type="text/javascript" src="Random%20Group%20Generator_files/getpixels" async=""></script><div><iframe src="https://google-bidout-d.openx.net/w/1.0/pd?plm=5" width="0" height="0" style="display:none;"></iframe></div><iframe src="Random%20Group%20Generator_files/syncframe_002.html" width="0" height="0" frameborder="0" style="border-width: 0px; margin: 0px; display: none;" sandbox="allow-scripts allow-same-origin" title="Criteo GUM iframe"></iframe><iframe src="Random%20Group%20Generator_files/aframe.html" width="0" height="0" style="display: none;"></iframe></body><iframe id="google_esf" name="google_esf" src="Random%20Group%20Generator_files/zrt_lookup_fy2021.html" style="display: none;"></iframe><iframe sandbox="allow-scripts allow-same-origin" id="15bd50ad8aba9c1" frameborder="0" allowtransparency="true" marginheight="0" marginwidth="0" width="0" hspace="0" vspace="0" height="0" style="height:0px;width:0px;display:none;" scrolling="no" src="Random%20Group%20Generator_files/usync.html">
+    </iframe><iframe sandbox="allow-scripts allow-same-origin" id="16e86c9b3dc3ed3" frameborder="0" allowtransparency="true" marginheight="0" marginwidth="0" width="0" hspace="0" vspace="0" height="0" style="height:0px;width:0px;display:none;" scrolling="no" src="https://prebid.a-mo.net/isyn?gdpr_consent=&amp;gdpr=0&amp;us_privacy=&amp;gpp=&amp;gpp_sid=">
+    </iframe><iframe sandbox="allow-scripts allow-same-origin" id="176deaa11ed1e8e" frameborder="0" allowtransparency="true" marginheight="0" marginwidth="0" width="0" hspace="0" vspace="0" height="0" style="height:0px;width:0px;display:none;" scrolling="no" src="Random%20Group%20Generator_files/user_sync.html">
+    </iframe><iframe sandbox="allow-scripts allow-same-origin" id="18e1b6875fb949f8" frameborder="0" allowtransparency="true" marginheight="0" marginwidth="0" width="0" hspace="0" vspace="0" height="0" style="height:0px;width:0px;display:none;" scrolling="no" src="Random%20Group%20Generator_files/a_005.html">
+    </iframe><iframe sandbox="allow-scripts allow-same-origin" id="676c8655d8621cf8" frameborder="0" allowtransparency="true" marginheight="0" marginwidth="0" width="0" hspace="0" vspace="0" height="0" style="height:0px;width:0px;display:none;" scrolling="no" src="Random%20Group%20Generator_files/a_006.html">
+    </iframe></html>
